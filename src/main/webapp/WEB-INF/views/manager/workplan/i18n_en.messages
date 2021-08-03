@@ -1,0 +1,28 @@
+# i18n_en.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+workplan.list.label.title = Title
+workplan.list.label.start = Start
+workplan.list.label.end = End
+workplan.list.label.workload = Workload
+workplan.error.workload =Workload is not correct
+workplan.error.end =End is before start 
+
+workplan.label.title = Title
+workplan.start = Start
+workplan.end = End
+workplan.label.workload = Workload
+workplan.list.label.publica= Public
+
+workplan.form.button.return=Return
+workplan.form.button.create = Create
+workplan.form.button.delete= Delete
+ 
+workplan.form.error.title =You introduced too many banned words in the title

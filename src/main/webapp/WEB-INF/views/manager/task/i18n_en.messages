@@ -1,0 +1,32 @@
+# i18n_en.messages
+#
+# Copyright (c) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+manager.task.list.label.title = Title
+manager.task.list.label.description = Description
+manager.task.list.label.start = Start
+manager.task.list.label.end = End
+manager.task.list.label.workload = Workload
+manager.task.error.workload =Workload is not correct
+manager.task.error.end =End is before start 
+
+manager.task.label.title = Title
+manager.task.label.description = Description
+manager.task.start = Start
+manager.task.end = End
+manager.task.label.workload = Workload
+manager.task.label.link=Link
+
+manager.task.label.publica=Public
+manager.task.button.return=Return
+manager.task.form.button.create = Create
+manager.task.button.delete= Delete
+
+manager.task.form.error.title= The title has spam words
+manager.task.form.error.description= The description has spam words

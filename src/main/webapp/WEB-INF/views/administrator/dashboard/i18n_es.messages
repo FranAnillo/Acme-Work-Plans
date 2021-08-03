@@ -1,0 +1,29 @@
+# i18n_en.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.general-indicators = Indicadores generales
+administrator.dashboard.form.label.number-of-public-task =  Numero de tareas publicas
+administrator.dashboard.form.title.application-statuses = Estado de la aplicacion
+administrator.dashboard.form.label.number-of-private-task=Numero de tareas privadas
+administrator.dashboard.form.label.number-of-finish-task = Numero de tareas acabadas
+administrator.dashboard.form.label.number-of-not-finish-task= Numero de tareas no acabadas
+administrator.dashboard.form.label.minimum-workload= Carga de trabajo mínima por tarea
+administrator.dashboard.form.label.maximum-workload= Carga de trabajo máxima por tarea
+administrator.dashboard.form.label.average-workload= Carga de trabajo media por tarea
+administrator.dashboard.form.label.deviation-workload= Desviación de la carga de trabajo por tarea
+administrator.dashboard.form.label.average-execution-periods= Periodo de ejecución medio por tarea
+administrator.dashboard.form.label.maximum-execution-periods= Máximo periodo de ejecucuón por tarea
+administrator.dashboard.form.label.minimum-execution-periods= Mínimo periodo de ejecucuón por tarea	
+administrator.dashboard.form.label.deviation-execution-periods= Desviación del periodo de ejecución por tarea	
+
+administrator.dashboard.form.graph.publicTask=Tareas públicas y privadas
+administrator.dashboard.form.graph.finishTask=Tareas finalizadas y no finalizadas
+administrator.dashboard.form.graph.minimumandmaximumWorkload=Carga mínima y máxima de trabajo
+administrator.dashboard.form.graph.averageanddeviationWorkload=Carga media de trabajo y desviación de carga de trabajo

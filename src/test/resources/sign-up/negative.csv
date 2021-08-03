@@ -1,0 +1,10 @@
+username,password,name,surname,email,company,sector
+,"juanito",,,,,
+ask,jhonny,Johnny,López,john@mail.com,"Cash & Carry, Co",Retailer
+lorraine,ask,Lorraine,Williams,lorraine@yellow-house.com,"Cash & Carry, Co",Retailer
+,jhonny,Johnny,López,john@mail.com,"Cash & Carry, Co",Retailer
+lorraine,,Lorraine,Williams,lorraine@yellow-house.com,"Cash & Carry, Co",Retailer
+leslie,leslie,,Ramport,leslie@us.es,"Networks, Inc.",Communications
+robert,robert,Robert,,robert@mail.server.com,"Networks, Inc.",Communications
+leslie,leslie,Leslie,Ramport,,"Networks, Inc.",Communications
+robert,robert,Robert,Ramport,robetobe,"Networks, Inc.",Communications

@@ -1,0 +1,69 @@
+timestamp;test-class;test-method;time;description;result
+2021-05-30 15:53:28.123;acme.testing.AnonymousShoutTest;create;2759;[1] author=Pepe Garcia, text=Be the change you want to see in the home, info=http://example.org;OK
+2021-05-30 15:53:30.82;acme.testing.AnonymousShoutTest;create;2387;[2] author=Julian Brandt, text=Be the change you want to see in the garden, info=http://example.org;OK
+2021-05-30 15:53:33.481;acme.testing.AnonymousShoutTest;create;2350;[3] author=Manuel Gavira, text=Be the change you want to see in the cinema, info=http://example.org;OK
+2021-05-30 15:53:36.522;acme.testing.AnonymousShoutTest;create;2610;[4] author=Juan Colete, text=The plain truth, info=;OK
+2021-05-30 15:53:39.648;acme.testing.AnonymousShoutTest;create;2784;[5] author=Victor Royal, text=Go fit, info=;OK
+;;Promedio create;2578;;
+;;Cuenta create;;;
+;;Promedio Cuenta create;2578;;
+2021-05-30 15:53:47.368;acme.testing.AnonymousShoutTest;createNegative;1721;[1] author=Juan Garcia, text=, info=http://example.org;OK
+2021-05-30 15:53:49.599;acme.testing.AnonymousShoutTest;createNegative;1934;[2] author=, text=Try it again. Fail again. Fail better, info=http://example.org;OK
+2021-05-30 15:53:51.693;acme.testing.AnonymousShoutTest;createNegative;1782;[3] author=Juan Colete, text=, info=http://example.org;OK
+2021-05-30 15:53:54.072;acme.testing.AnonymousShoutTest;createNegative;2062;[4] author=Juan Colete, text=sex, info=http://example.org;OK
+2021-05-30 15:53:56.113;acme.testing.AnonymousShoutTest;createNegative;1736;[5] author=sex, text=example, info=http://example.org;OK
+;;Promedio createNegative;1847;;
+2021-05-30 15:53:41.108;acme.testing.AnonymousShoutTest;listShout;1140;[1] recordIndex=6, moment=2021/05/21 05:00, author=Mark Kent, text=We live with the scars we choose;OK
+2021-05-30 15:53:42.472;acme.testing.AnonymousShoutTest;listShout;1018;[2] recordIndex=4, moment=2021/05/20 00:00, author=Patrick Foden, text=Who seeks shall find;OK
+2021-05-30 15:53:43.981;acme.testing.AnonymousShoutTest;listShout;1098;[3] recordIndex=5, moment=2021/05/21 00:00, author=Sarah Bent, text=A goal is a dream with a deadline;OK
+2021-05-30 15:53:45.308;acme.testing.AnonymousShoutTest;listShout;983;[4] recordIndex=3, moment=2021/05/19 00:00, author=Chris Welbeck, text=Only do what your heart tells you!;OK
+;;Promedio listShout;1059,75;;
+2021-05-30 15:55:56.414;acme.testing.AnonymousTaskTest;AnonymousTaskListPositive;1962;[1] recordIndex=0, title=Notification, workload=25, description=When creating a task, you can send an SMS notification, start=2021/11/06 00:00, end=2022/11/13 05:00;OK
+2021-05-30 15:55:58.883;acme.testing.AnonymousTaskTest;AnonymousTaskListPositive;2189;[2] recordIndex=1, title=Work, workload=30, description=This facilitates the task when you work with many files, start=2021/08/08 01:00, end=2022/09/08 02:00;OK
+2021-05-30 15:56:01.151;acme.testing.AnonymousTaskTest;AnonymousTaskListPositive;1972;[3] recordIndex=2, title=Life, workload=35, description=This task connects directly with the quality of our spiritual life, start=2021/11/18 02:00, end=2022/11/22 04:00;OK
+;;Promedio AnonymousTaskListPositive;2041;;
+2021-05-30 15:54:29.625;acme.testing.AuthenticatedTaskListTest;listPositive;5546;[1] recordIndex=0, title=Life, description=Thus one can link two tasks, the spiritual and the physical, start=2021/10/15 02:00, end=2022/10/16 01:00, workload=100;OK
+2021-05-30 15:54:34.763;acme.testing.AuthenticatedTaskListTest;listPositive;4862;[2] recordIndex=1, title=Political, description=Their appointment, roles and tasks should be clearly determined, start=2021/10/18 00:00, end=2022/10/21 04:00, workload=100;OK
+2021-05-30 15:54:39.9;acme.testing.AuthenticatedTaskListTest;listPositive;4819;[3] recordIndex=2, title=Political, description=The free status relates to the tasks of local governments, start=2021/10/23 06:00, end=2022/10/24 10:00, workload=100;OK
+2021-05-30 15:54:45.128;acme.testing.AuthenticatedTaskListTest;listPositive;4907;[4] recordIndex=3, title=Work, description=The free status relates to the tasks of local governments, start=2021/11/02 02:00, end=2022/11/03 04:00, workload=100;OK
+2021-05-30 15:54:50.164;acme.testing.AuthenticatedTaskListTest;listPositive;4733;[5] recordIndex=4, title=Work, description=Each department has its own rules, daily tasks, milestones and goals, start=2021/11/05 09:00, end=2022/11/06 11:00, workload=100;OK
+2021-05-30 15:54:55.247;acme.testing.AuthenticatedTaskListTest;listPositive;4801;[6] recordIndex=5, title=Political, description=Duties and tasks of the laboratories participating in the consortium, start=2021/11/13 03:00, end=2022/11/14 07:00, workload=100;OK
+;;Promedio listPositive;4944,666667;;
+2021-05-30 15:55:27.79;acme.testing.ConsumerUpdateTest;PcreateConsumer;6227;[1] recordIndex=0, company=PepeMax, sector=primary, newCompany=ManolitoPiesDePlata, newSector=Secondary;OK
+;;Promedio PcreateConsumer;6227;;
+2021-05-30 16:00:59.691;acme.testing.CreateConsumerTest;createConsumer;4091;[1] recordIndex=0, company=PepeMax, sector=null;OK
+2021-05-30 16:01:04.167;acme.testing.CreateConsumerTest;createConsumer;4213;[2] recordIndex=1, company=null, sector=primary;OK
+;;Promedio createConsumer;4152;;
+2021-05-30 16:01:09.692;acme.testing.CreateConsumerTest;PcreateConsumer;5195;[1] recordIndex=0, company=PepeMax, sector=primary;OK
+;;Promedio PcreateConsumer;5195;;
+2021-05-30 15:56:34.995;acme.testing.ManagerCreateTask;create;8012;[1] title=Task 1, description=Description of the taks 1, workload=20, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org;OK
+;;Promedio create;8012;;
+2021-05-30 15:56:40.104;acme.testing.ManagerCreateTask;createNegative;4807;[1] title=null, description=Description of the taks 1, workload=20, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org;OK
+;;Promedio createNegative;4807;;
+2021-05-30 15:57:47.713;acme.testing.ManagerTaskListTest;ManagerTaskList;5287;[1] recordIndex=1, title=Political, workload=40, description=the implementation of these policies is not an easy task, start=2021/08/07 00:00, end=2022/09/07 00:00, link=null;OK
+;;Promedio ManagerTaskList;5287;;
+2021-05-30 15:59:15.603;acme.testing.ProviderCreateTest;createProviderPositive;5106;[1] recordIndex=0, company=PepeMax, sector=primary;OK
+;;Promedio createProviderPositive;5106;;
+2021-05-30 15:57:17.4;acme.testing.ProviderUpdateTest;updateProviderPositive;6180;[1] recordIndex=0, company=PepeMax, sector=primary, newCompany=ManolitoPiesDePlata, newSector=Secondary;OK
+;;Promedio updateProviderPositive;6180;;
+2021-05-30 16:00:05.997;acme.testing.SignUpTest;negativeSignUp;2023;[1] username=null, password=juanito, name=null, surname=null, email=null;OK
+2021-05-30 16:00:08.527;acme.testing.SignUpTest;negativeSignUp;2269;[2] username=ask, password=jhonny, name=Johnny, surname=López, email=john@mail.com;OK
+2021-05-30 16:00:10.998;acme.testing.SignUpTest;negativeSignUp;2178;[3] username=lorraine, password=ask, name=Lorraine, surname=Williams, email=lorraine@yellow-house.com;OK
+2021-05-30 16:00:13.613;acme.testing.SignUpTest;negativeSignUp;2269;[4] username=null, password=jhonny, name=Johnny, surname=López, email=john@mail.com;OK
+2021-05-30 16:00:16.406;acme.testing.SignUpTest;negativeSignUp;2489;[5] username=lorraine, password=null, name=Lorraine, surname=Williams, email=lorraine@yellow-house.com;OK
+2021-05-30 16:00:19.024;acme.testing.SignUpTest;negativeSignUp;2308;[6] username=leslie, password=leslie, name=null, surname=Ramport, email=leslie@us.es;OK
+2021-05-30 16:00:21.743;acme.testing.SignUpTest;negativeSignUp;2428;[7] username=robert, password=robert, name=Robert, surname=null, email=robert@mail.server.com;OK
+2021-05-30 16:00:24.448;acme.testing.SignUpTest;negativeSignUp;2220;[8] username=leslie, password=leslie, name=Leslie, surname=Ramport, email=null;OK
+2021-05-30 16:00:26.896;acme.testing.SignUpTest;negativeSignUp;2085;[9] username=robert, password=robert, name=Robert, surname=Ramport, email=robetobe;OK
+;;Promedio negativeSignUp;2252,111111;;
+2021-05-30 15:59:45.189;acme.testing.SignUpTest;positiveSignUp;5723;[1] username=johnny, password=johnny, name=Johnny, surname=López, email=john@mail.com;OK
+2021-05-30 15:59:51.525;acme.testing.SignUpTest;positiveSignUp;5981;[2] username=lorraine, password=lorraine, name=Lorraine, surname=Williams, email=lorraine@yellow-house.com;OK
+2021-05-30 15:59:57.28;acme.testing.SignUpTest;positiveSignUp;5464;[3] username=leslie, password=leslie, name=Leslie Marti, surname=Ramport, email=leslie@us.es;OK
+2021-05-30 16:00:03.66;acme.testing.SignUpTest;positiveSignUp;6091;[4] username=robert, password=robert, name=Robert, surname=Johnson, email=robert@mail.server.com;OK
+2021-05-30 15:58:23.358;acme.testing.UpdateAccountTest;positiveSignUp;10762;[1] username=johnny, password=johnny, name=Johnny, surname=López, email=john@mail.com, newPassword=john55, newName=Tonny, newSurname=Ló, newEmail=john@gmail.com;OK
+2021-05-30 15:58:34.804;acme.testing.UpdateAccountTest;positiveSignUp;11174;[2] username=lorraine, password=lorraine, name=Lorraine, surname=Williams, email=lorraine@yellow-house.com, newPassword=55john, newName=Parker, newSurname=Ló, newEmail=john@gmail.com;OK
+2021-05-30 15:58:46.07;acme.testing.UpdateAccountTest;positiveSignUp;10963;[3] username=leslie, password=leslie, name=Leslie Marti, surname=Ramport, email=leslie@us.es, newPassword=jo55hn, newName=Peter, newSurname=Ló, newEmail=john@gmail.com;OK
+;;Promedio positiveSignUp;8022,571429;;
+;;;;;
+;;;;;
+;;Promedio general;3910,416667;;

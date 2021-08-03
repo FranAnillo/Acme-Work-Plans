@@ -1,0 +1,29 @@
+# i18n_en.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.general-indicators = General indicators
+administrator.dashboard.form.label.number-of-public-task =  Number of public tasks
+administrator.dashboard.form.title.application-statuses = Application statuses
+administrator.dashboard.form.label.number-of-private-task= Number of private tasks
+administrator.dashboard.form.label.number-of-finish-task = Number of finished tasks
+administrator.dashboard.form.label.number-of-not-finish-task= Number of not finished tasks
+administrator.dashboard.form.label.minimum-workload= Task minimum workload
+administrator.dashboard.form.label.maximum-workload= Task maximum workload
+administrator.dashboard.form.label.average-workload= Task average workload
+administrator.dashboard.form.label.deviation-workload= Task deviation workload
+administrator.dashboard.form.label.average-execution-periods= Task average execution periods
+administrator.dashboard.form.label.maximum-execution-periods= Task maximum execution periods	
+administrator.dashboard.form.label.minimum-execution-periods= Task minimum execution periods	
+administrator.dashboard.form.label.deviation-execution-periods= Task deviation execution periods	
+
+administrator.dashboard.form.graph.publicTask=Public and private tasks
+administrator.dashboard.form.graph.finishTask=Finish and not finish tasks
+administrator.dashboard.form.graph.minimumandmaximumWorkload= Minimum and maximum Workload
+administrator.dashboard.form.graph.averageanddeviationWorkload= Average Workload and deviation Workload

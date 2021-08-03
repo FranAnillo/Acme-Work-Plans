@@ -1,0 +1,17 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-07 12:15:07.656,acme.testing.AnonymousShoutTest,create,3443,"[1] recordIndex=7, author=Pepe Garcia, text=Be the change you want to see in the home, info=http://example.org",OK
+2021-06-07 12:15:11.32,acme.testing.AnonymousShoutTest,create,3454,"[2] recordIndex=8, author=Julian Brandt, text=Be the change you want to see in the garden, info=http://example.org",OK
+2021-06-07 12:15:14.907,acme.testing.AnonymousShoutTest,create,3403,"[3] recordIndex=9, author=Manuel Gavira, text=Be the change you want to see in the cinema, info=http://example.org",OK
+2021-06-07 12:15:18.472,acme.testing.AnonymousShoutTest,create,3382,"[4] recordIndex=10, author=Juan Colete, text=The plain truth, info=null",OK
+2021-06-07 12:15:22.041,acme.testing.AnonymousShoutTest,create,3388,"[5] recordIndex=11, author=Victor Royal, text=Go fit, info=null",OK
+2021-06-07 12:15:23.663,acme.testing.AnonymousShoutTest,listShout,1442,"[1] recordIndex=6, moment=2021/05/21 05:00, author=Mark Kent, text=We live with the scars we choose",OK
+2021-06-07 12:15:25.272,acme.testing.AnonymousShoutTest,listShout,1411,"[2] recordIndex=4, moment=2021/05/20 00:00, author=Patrick Foden, text=Who seeks shall find",OK
+2021-06-07 12:15:26.864,acme.testing.AnonymousShoutTest,listShout,1410,"[3] recordIndex=5, moment=2021/05/21 00:00, author=Sarah Bent, text=A goal is a dream with a deadline",OK
+2021-06-07 12:15:28.503,acme.testing.AnonymousShoutTest,listShout,1456,"[4] recordIndex=3, moment=2021/05/19 00:00, author=Chris Welbeck, text=Only do what your heart tells you!",OK
+2021-06-07 12:15:30.697,acme.testing.AnonymousShoutTest,createNegative,2012,"[1] author=Juan Garcia, text=, info=http://example.org",OK
+2021-06-07 12:15:32.913,acme.testing.AnonymousShoutTest,createNegative,2029,"[2] author=, text=Try it again. Fail again. Fail better, info=http://example.org",OK
+2021-06-07 12:15:35.11,acme.testing.AnonymousShoutTest,createNegative,2007,"[3] author=Juan Colete, text=, info=http://example.org",OK
+2021-06-07 12:15:37.329,acme.testing.AnonymousShoutTest,createNegative,2031,"[4] author=Juan Colete, text=sex, info=http://example.org",OK
+2021-06-07 12:15:39.533,acme.testing.AnonymousShoutTest,createNegative,2016,"[5] author=sex, text=example, info=http://example.org",OK
+2021-06-07 12:15:41.766,acme.testing.AnonymousShoutTest,createNegative,2047,"[6] author=Sad, text=Be the change you want to see in the home, info=http://example.org",OK
+2021-06-07 12:15:43.982,acme.testing.AnonymousShoutTest,createNegative,2026,"[7] author=Pepe Garcia, text=Be the change you want to see in the home Be the change you want see in the home Be, info=link1",OK

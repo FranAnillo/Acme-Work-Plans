@@ -1,0 +1,4 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-07 11:54:15.719,acme.testing.AnonymousShoutTest,create,5376,"[1] recordIndex=7, author=Pepe Garcia, text=Be the change you want to see in the home, info=http://example.org",OK
+2021-06-07 11:54:23.509,acme.testing.AnonymousShoutTest,create,7130,"[2] recordIndex=8, author=Julian Brandt, text=Be the change you want to see in the garden, info=http://example.org",OK
+2021-06-07 11:54:29.537,acme.testing.AnonymousShoutTest,create,5208,"[3] recordIndex=9, author=Manuel Gavira, text=Be the change you want to see in the cinema, info=http://example.org",OK

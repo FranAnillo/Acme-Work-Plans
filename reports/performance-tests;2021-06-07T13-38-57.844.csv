@@ -1,0 +1,2 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-07 13:39:09.618,acme.testing.AdministratorDashboardTest,listDashboard,3271,"[1] publicTask=24.00, privateTask=24.00, finishTask=24.00, notFinishTask=24.00, minimumWorkload=20.00, maximumWorkload=100.00, averageWorkload=74.90, deviationWorkload=27.70, averageExecutionPeriods=530,806.25",Expected value '20.00' in input box 'minimumWorkload', but '20.00' was found

@@ -1,0 +1,20 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-07 12:58:12.195,acme.testing.ManagerCreateTask,create,8083,"[1] title=Task 1, description=Description of the task 1, workload=20.00, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org",OK
+2021-06-07 12:58:20.442,acme.testing.ManagerCreateTask,create,8061,"[2] title=Task 2, description=Description of the task 2, workload=30.00, start=2021/11/20 07:00, end=2022/11/24 07:00, link=http://example.org",OK
+2021-06-07 12:58:28.724,acme.testing.ManagerCreateTask,create,8093,"[3] title=Task 3, description=Description of the task 3, workload=20.00, start=2021/08/23 06:00, end=2022/10/23 06:00, link=http://example.org",OK
+2021-06-07 12:58:36.894,acme.testing.ManagerCreateTask,create,7986,"[4] title=Task 4, description=Description of the task 4, workload=20.00, start=2021/07/21 04:00, end=2022/07/26 08:00, link=null",OK
+2021-06-07 12:58:45.177,acme.testing.ManagerCreateTask,create,8082,"[5] title=Task 5, description=Description of the task 5, workload=20.00, start=2021/08/12 12:00, end=2022/08/12 12:00, link=http://example.org",OK
+2021-06-07 12:58:53.377,acme.testing.ManagerCreateTask,create,8016,"[6] title=Task 6, description=Description of the task 6, workload=20.00, start=2021/10/16 11:00, end=2022/10/18 10:00, link=http://example.org",OK
+2021-06-07 12:59:01.549,acme.testing.ManagerCreateTask,create,7982,"[7] title=Task 7, description=Description of the task 7, workload=20.00, start=2021/09/18 08:00, end=2022/09/15 11:00, link=null",OK
+2021-06-07 12:59:09.691,acme.testing.ManagerCreateTask,createNegative,7954,"[1] title=, description=Description of the task 1, workload=20.00, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org",OK
+2021-06-07 12:59:17.908,acme.testing.ManagerCreateTask,createNegative,8027,"[2] title=Task 1, description=null, workload=20.00, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org",OK
+2021-06-07 12:59:26.134,acme.testing.ManagerCreateTask,createNegative,8037,"[3] title=Task 1, description=Description of the task 1, workload=null, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org",OK
+2021-06-07 12:59:34.321,acme.testing.ManagerCreateTask,createNegative,8002,"[4] title=Task 1, description=Description of the task 1, workload=20.00, start=null, end=2022/10/24 06:00, link=http://example.org",OK
+2021-06-07 12:59:42.501,acme.testing.ManagerCreateTask,createNegative,7990,"[5] title=Task 1, description=Description of the task 1, workload=20.00, start=2021/10/23 06:00, end=null, link=http://example.org",OK
+2021-06-07 12:59:50.68,acme.testing.ManagerCreateTask,createNegative,7993,"[6] title=Task 1, description=Description of the task 1, workload=20.00, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org",OK
+2021-06-07 12:59:58.852,acme.testing.ManagerCreateTask,createNegative,7984,"[7] title=Task 1, description=Description of the task 1, workload=-1, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org",OK
+2021-06-07 13:00:07.093,acme.testing.ManagerCreateTask,createNegative,8052,"[8] title=Task 1, description=Description of the task 1, workload=20.00, start=2021/10/23 06:00, end=2020/10/24 06:00, link=http://example.org",OK
+2021-06-07 13:00:15.299,acme.testing.ManagerCreateTask,createNegative,8017,"[9] title=Task 1, description=Description of the task 1, workload=20.00, start=2021/10/23 06:00, end=2022/10/24 06:00, link=description1",OK
+2021-06-07 13:00:23.521,acme.testing.ManagerCreateTask,createNegative,8031,"[10] title=Sex, description=Description of the task 1, workload=20.00, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org",OK
+2021-06-07 13:00:31.72,acme.testing.ManagerCreateTask,createNegative,8012,"[11] title=Task 1, description=Sex, workload=20.00, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org",OK
+2021-06-07 13:00:39.916,acme.testing.ManagerCreateTask,createNegative,8008,"[12] title=Task 1, description=Description of the task 1, workload=20.00, start=2021/10/23 06:00, end=2022/10/24 06:00, link=http://example.org",OK
