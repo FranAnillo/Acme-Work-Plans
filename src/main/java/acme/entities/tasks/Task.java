@@ -15,7 +15,7 @@ import javax.validation.constraints.Positive;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.roles.Manager;
+import acme.entities.roles.Manag;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -68,6 +68,6 @@ public class Task extends DomainEntity {
 		@NotNull
 		@Valid
 		@ManyToOne(optional = false)
-		protected Manager manager;
+		protected Manag manag;
 
 }

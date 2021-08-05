@@ -317,141 +317,141 @@
 		<property name="info" value="https://www.ebay.com" />
 	</bean>
 
-	<!-- Manager -->
+	<!-- Manag -->
 	
-	<bean name="manager1UserAccount"
+	<bean name="manag1UserAccount"
 		class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager1" />
-		<property name="password" value="manager1" />
+		<property name="username" value="manag1" />
+		<property name="password" value="manag1" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager" />
+				<property name="name" value="Manag" />
 				<property name="surname" value="One" />
-				<property name="email" value="manager1@mail.com" />
+				<property name="email" value="manag1@mail.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="manager1Employer" />
-				<ref bean="manager1Authenticated" />
+				<ref bean="manag1Employer" />
+				<ref bean="manag1Authenticated" />
 			</list>
 		</property>
 	</bean>
-	<bean name="manager1Employer" class="acme.entities.roles.Manager">
-		<property name="userAccount" ref="manager1UserAccount" />
+	<bean name="manag1Employer" class="acme.entities.roles.Manag">
+		<property name="userAccount" ref="manag1UserAccount" />
 	</bean>
-	<bean name="manager1Authenticated"
+	<bean name="manag1Authenticated"
 		class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="manager1UserAccount" />
+		<property name="userAccount" ref="manag1UserAccount" />
 	</bean>
 	
-	<bean name="manager2UserAccount"
+	<bean name="manag2UserAccount"
 		class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager2" />
-		<property name="password" value="manager2" />
+		<property name="username" value="manag2" />
+		<property name="password" value="manag2" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager" />
+				<property name="name" value="manag" />
 				<property name="surname" value="Two" />
-				<property name="email" value="manager2@mail.com" />
+				<property name="email" value="manag2@mail.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="manager2Employer" />
-				<ref bean="manager2Authenticated" />
+				<ref bean="manag2Employer" />
+				<ref bean="manag2Authenticated" />
 			</list>
 		</property>
 	</bean>
-	<bean name="manager2Employer" class="acme.entities.roles.Manager">
-		<property name="userAccount" ref="manager2UserAccount" />
+	<bean name="manag2Employer" class="acme.entities.roles.Manag">
+		<property name="userAccount" ref="manag2UserAccount" />
 	</bean>
-	<bean name="manager2Authenticated"
+	<bean name="manag2Authenticated"
 		class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="manager2UserAccount" />
+		<property name="userAccount" ref="manag2UserAccount" />
 	</bean>
 	
-		<bean name="manager3UserAccount"
+		<bean name="manag3UserAccount"
 		class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager3" />
-		<property name="password" value="manager3" />
+		<property name="username" value="manag3" />
+		<property name="password" value="manag3" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager" />
+				<property name="name" value="manag" />
 				<property name="surname" value="Three" />
-				<property name="email" value="manager3@mail.com" />
+				<property name="email" value="manag3@mail.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="manager3Employer" />
-				<ref bean="manager3Authenticated" />
+				<ref bean="manag3Employer" />
+				<ref bean="manag3Authenticated" />
 			</list>
 		</property>
 	</bean>
-	<bean name="manager3Employer" class="acme.entities.roles.Manager">
-		<property name="userAccount" ref="manager3UserAccount" />
+	<bean name="manag3Employer" class="acme.entities.roles.Manag">
+		<property name="userAccount" ref="manag3UserAccount" />
 	</bean>
-	<bean name="manager3Authenticated"
+	<bean name="manag3Authenticated"
 		class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="manager3UserAccount" />
+		<property name="userAccount" ref="manag3UserAccount" />
 	</bean>
 	
-	<bean name="manager4UserAccount"
+	<bean name="manag4UserAccount"
 		class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager4" />
-		<property name="password" value="manager4" />
+		<property name="username" value="manag4" />
+		<property name="password" value="manag4" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager" />
+				<property name="name" value="manag" />
 				<property name="surname" value="Four" />
-				<property name="email" value="manager4@mail.com" />
+				<property name="email" value="manag4@mail.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="manager4Employer" />
-				<ref bean="manager4Authenticated" />
+				<ref bean="manag4Employer" />
+				<ref bean="manag4Authenticated" />
 			</list>
 		</property>
 	</bean>
-	<bean name="manager4Employer" class="acme.entities.roles.Manager">
-		<property name="userAccount" ref="manager4UserAccount" />
+	<bean name="manag4Employer" class="acme.entities.roles.Manag">
+		<property name="userAccount" ref="manag4UserAccount" />
 	</bean>
-	<bean name="manager4Authenticated"
+	<bean name="manag4Authenticated"
 		class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="manager4UserAccount" />
+		<property name="userAccount" ref="manag4UserAccount" />
 	</bean>
 	
-	<bean name="manager5UserAccount"
+	<bean name="manag5UserAccount"
 		class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager5" />
-		<property name="password" value="manager5" />
+		<property name="username" value="manag5" />
+		<property name="password" value="manag5" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager" />
+				<property name="name" value="manag" />
 				<property name="surname" value="Five" />
-				<property name="email" value="manager5@mail.com" />
+				<property name="email" value="manag5@mail.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="manager5Employer" />
-				<ref bean="manager5Authenticated" />
+				<ref bean="manag5Employer" />
+				<ref bean="manag5Authenticated" />
 			</list>
 		</property>
 	</bean>
-	<bean name="manager5Employer" class="acme.entities.roles.Manager">
-		<property name="userAccount" ref="manager5UserAccount" />
+	<bean name="manag5Employer" class="acme.entities.roles.Manag">
+		<property name="userAccount" ref="manag5UserAccount" />
 	</bean>
-	<bean name="manager5Authenticated"
+	<bean name="manag5Authenticated"
 		class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="manager5UserAccount" />
+		<property name="userAccount" ref="manag5UserAccount" />
 	</bean>
 	
 	<!-- Tasks -->
@@ -464,7 +464,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="40"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task02" class="acme.entities.tasks.Task">
@@ -475,7 +475,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="30"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task03" class="acme.entities.tasks.Task">
@@ -486,7 +486,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="50"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task04" class="acme.entities.tasks.Task">
@@ -497,7 +497,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="60"/>
-		<property name="manager" ref="manager4Employer"/>
+		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task05" class="acme.entities.tasks.Task">
@@ -508,7 +508,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="40"/>
-		<property name="manager" ref="manager5Employer"/>
+		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task06" class="acme.entities.tasks.Task">
@@ -519,7 +519,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="40"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task07" class="acme.entities.tasks.Task">
@@ -530,7 +530,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="40"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task08" class="acme.entities.tasks.Task">
@@ -541,7 +541,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="25"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task09" class="acme.entities.tasks.Task">
@@ -552,7 +552,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="35"/>
-		<property name="manager" ref="manager4Employer"/>
+		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task10" class="acme.entities.tasks.Task">
@@ -563,7 +563,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="40"/>
-		<property name="manager" ref="manager5Employer"/>
+		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task11" class="acme.entities.tasks.Task">
@@ -574,7 +574,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="45"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task12" class="acme.entities.tasks.Task">
@@ -585,7 +585,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="55"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task13" class="acme.entities.tasks.Task">
@@ -596,7 +596,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task14" class="acme.entities.tasks.Task">
@@ -607,7 +607,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager4Employer"/>
+		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task15" class="acme.entities.tasks.Task">
@@ -618,7 +618,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager5Employer"/>
+		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task16" class="acme.entities.tasks.Task">
@@ -629,7 +629,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task17" class="acme.entities.tasks.Task">
@@ -640,7 +640,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task18" class="acme.entities.tasks.Task">
@@ -651,7 +651,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task19" class="acme.entities.tasks.Task">
@@ -662,7 +662,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager4Employer"/>
+		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task20" class="acme.entities.tasks.Task">
@@ -673,7 +673,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager5Employer"/>
+		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task21" class="acme.entities.tasks.Task">
@@ -684,7 +684,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task22" class="acme.entities.tasks.Task">
@@ -695,7 +695,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task23" class="acme.entities.tasks.Task">
@@ -706,7 +706,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task24" class="acme.entities.tasks.Task">
@@ -717,7 +717,7 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager4Employer"/>
+		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task25" class="acme.entities.tasks.Task">
@@ -728,7 +728,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="45"/>
-		<property name="manager" ref="manager5Employer"/>
+		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task26" class="acme.entities.tasks.Task">
@@ -739,7 +739,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="35"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task27" class="acme.entities.tasks.Task">
@@ -750,7 +750,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="55"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task28" class="acme.entities.tasks.Task">
@@ -761,7 +761,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="50"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task29" class="acme.entities.tasks.Task">
@@ -772,7 +772,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="60"/>
-		<property name="manager" ref="manager4Employer"/>
+		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task30" class="acme.entities.tasks.Task">
@@ -783,7 +783,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="75"/>
-		<property name="manager" ref="manager5Employer"/>
+		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task31" class="acme.entities.tasks.Task">
@@ -794,7 +794,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="70"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task32" class="acme.entities.tasks.Task">
@@ -805,7 +805,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="80"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task33" class="acme.entities.tasks.Task">
@@ -816,7 +816,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="65"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task34" class="acme.entities.tasks.Task">
@@ -827,7 +827,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="20"/>
-		<property name="manager" ref="manager4Employer"/>
+		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task35" class="acme.entities.tasks.Task">
@@ -838,7 +838,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="55"/>
-		<property name="manager" ref="manager5Employer"/>
+		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task36" class="acme.entities.tasks.Task">
@@ -849,7 +849,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="85"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task37" class="acme.entities.tasks.Task">
@@ -860,7 +860,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task38" class="acme.entities.tasks.Task">
@@ -871,7 +871,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task39" class="acme.entities.tasks.Task">
@@ -882,7 +882,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager4Employer"/>
+		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task40" class="acme.entities.tasks.Task">
@@ -893,7 +893,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager5Employer"/>
+		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task41" class="acme.entities.tasks.Task">
@@ -904,7 +904,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task42" class="acme.entities.tasks.Task">
@@ -915,7 +915,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task43" class="acme.entities.tasks.Task">
@@ -926,7 +926,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task44" class="acme.entities.tasks.Task">
@@ -937,7 +937,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager4Employer"/>
+		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task45" class="acme.entities.tasks.Task">
@@ -948,7 +948,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager5Employer"/>
+		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task46" class="acme.entities.tasks.Task">
@@ -959,7 +959,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager1Employer"/>
+		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task47" class="acme.entities.tasks.Task">
@@ -970,7 +970,7 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager2Employer"/>
+		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task48" class="acme.entities.tasks.Task">
@@ -981,6 +981,6 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="manager" ref="manager3Employer"/>
+		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 </beans>
