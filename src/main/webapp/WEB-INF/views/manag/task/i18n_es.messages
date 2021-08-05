@@ -1,0 +1,31 @@
+# i18n_en.messages
+#
+# Copyright (c) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+manag.task.list.label.title = Titulo
+manag.task.list.label.description = Descripcion
+manag.task.list.label.start = Comienzo
+manag.task.list.label.end = Finalizacion
+manag.task.list.label.workload = Carga de trabajo
+manag.task.error.workload =La carga de trabajo no es correcta
+manag.task.error.end=La fecha final es anterior a la de comienzo
+
+manag.task.label.title = Titulo
+manag.task.label.description = Descripcion
+manag.task.label.start = Comienzo
+manag.task.label.end = Finalizacion
+manag.task.label.workload = Carga de trabajo
+
+manag.task.label.publica=Publica
+manag.task.button.return= Volver
+manag.task.form.button.create = Crear
+manag.task.button.delete=Borrar
+
+manag.task.form.error.title= El título contiene demasiadas palabras de spam
+manag.task.form.error.description= La descripción contiene demasiadas palabras de spam

@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotNull;
 
-import acme.entities.roles.Manager;
+import acme.entities.roles.Manag;
 import acme.entities.tasks.Task;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -57,7 +57,7 @@ public class Workplan extends DomainEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected Manager manager;
+	protected Manag manag;
 	
 	@Valid
 	@ManyToMany

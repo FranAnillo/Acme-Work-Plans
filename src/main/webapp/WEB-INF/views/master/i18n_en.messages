@@ -56,11 +56,11 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
-# master.menu.manager ##########################################################
+# master.menu.manag ##########################################################
 
-master.menu.manager = Manager
-master.menu.manager.task = Tasks
-master.menu.manager.task.create = Create Task
+master.menu.manag = Manager
+master.menu.manag.task = Tasks
+master.menu.manag.task.create = Create Task
 master.menu.workplan = Workplan
 master.menu.workplan.list = List Workplan
 master.menu.workplan.create = Create Workplan
@@ -73,8 +73,8 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
-master.menu.user-account.manager = Manager data
-master.menu.user-account.become-manager = Become a manager
+master.menu.user-account.manag = Manager data
+master.menu.user-account.become-manag = Become a manager
 
 # master.footer ###############################################################
 
