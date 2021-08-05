@@ -50,16 +50,10 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.manager.task" action="/manager/task/list"/>
-			<acme:menu-suboption code="master.menu.manager.task.create" action="/manager/task/create"/>
-		</acme:menu-option>
-		
-		<%-- <acme:menu-option code="master.menu.workplan" access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.workplan.list" action="/manager/workplan/list"/>
-			<acme:menu-suboption code="master.menu.workplan.create" action="/manager/workplan/create"/>
-		</acme:menu-option> --%>
-		
+		<acme:menu-option code="master.menu.manag" access="hasRole('Manag')">
+			<acme:menu-suboption code="master.menu.manag.task" action="/manag/task/list"/>
+			<acme:menu-suboption code="master.menu.manag.task.create" action="/manag/task/create"/>
+		</acme:menu-option>		
 		
 	</acme:menu-left>
 
@@ -73,7 +67,7 @@
 			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
-			<acme:menu-suboption code="master.menu.user-account.become-manager" action="/authenticated/manager/create" access="!hasRole('Manager')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-manag" action="/authenticated/manag/create" access="!hasRole('Manag')"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
