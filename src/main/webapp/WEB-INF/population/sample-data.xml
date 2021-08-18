@@ -82,7 +82,7 @@
 	<!-- Shouts -->
 	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/02/13 08:30" />
+		<property name="moment" value="2020/02/13 09:30" />
 		<property name="author" value="Jhon Doe" />
 		<property name="text" value="I'm happy!" />
 		<property name="info">
@@ -91,7 +91,7 @@
 	</bean>
 
 	<bean id="shout02" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/08/09 07:55" />
+		<property name="moment" value="2020/09/09 07:55" />
 		<property name="author" value="Jane Doe" />
 		<property name="text" value="I'm the master of my room!" />
 		<property name="info" value="http://www.example.org" />
@@ -121,7 +121,7 @@
 	</bean>
 
 	<bean id="shout06" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/11/08 03:00" />
+		<property name="moment" value="2020/11/09 03:00" />
 		<property name="author" value="Paul Pogba" />
 		<property name="text"
 			value="Once you choose hope, anything’s possible" />
@@ -185,7 +185,7 @@
 	</bean>
 
 	<bean id="shout14" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/04/08 01:00" />
+		<property name="moment" value="2020/04/09 01:00" />
 		<property name="author" value="Gary Cahill" />
 		<property name="text"
 			value="The secret of your success is determined by your daily agenda" />
@@ -459,6 +459,7 @@
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "the implementation of these policies is not an easy task"/>
+
 		<property name="start" value="2021/10/07 00:00"/>
 		<property name="end" value="2022/10/07 00:00"/>
 		<property name="publica" value="true"/>
@@ -467,6 +468,7 @@
 		<property name="link" value="https://www.microsoft.com"/>
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	 
+
 
 	<bean id="task02" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
@@ -477,6 +479,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="30"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -489,6 +492,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="50"/>
 		<property name="link" value="https://www.as.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -500,7 +504,9 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="60"/>
+
 		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -513,6 +519,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="40"/>
 		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -520,11 +527,12 @@
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Our first task is to understand what your business requires"/>
 		<property name="start" value="2021/10/17 02:00"/>
-		<property name="end" value="2022/10/27 08:00"/>
+		<property name="end" value="2022/10/27 09:00"/>
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="40"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -536,7 +544,9 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="40"/>
+
 		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -549,6 +559,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="25"/>
 		<property name="link" value="https://www.as.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -561,6 +572,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="35"/>
 		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -573,6 +585,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="40"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -585,6 +598,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="45"/>
 		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -597,6 +611,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="55"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -609,6 +624,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -621,6 +637,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.as.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -633,6 +650,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -644,7 +662,9 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
+
 		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -657,6 +677,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -668,7 +689,9 @@
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
+
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -681,6 +704,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -693,6 +717,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -705,6 +730,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -717,30 +743,35 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task23" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "At present, our development tasks have become more pressing"/>
+
 		<property name="start" value="2021/12/24 00:00"/>
 		<property name="end" value="2022/08/25 10:00"/>
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task24" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "Overcoming poverty is one of its priority tasks"/>
+
 		<property name="start" value="2021/11/26 05:00"/>
 		<property name="end" value="2022/08/27 11:00"/>
 		<property name="publica" value="true"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -753,6 +784,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="45"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -764,7 +796,9 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="35"/>
+
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -776,19 +810,22 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="55"/>
+
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task28" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
-		<property name="description" value= "This allows them to carry out all sorts of important tasks"/>
-		<property name="start" value="2021/10/22 08:00"/>
+		<property name="description" value= "This allows them to carry out all sorts of important tasks"/>		<property name="start" value="2021/10/22 08:00"/>
+
 		<property name="end" value="2022/09/23 12:00"/>
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="50"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -800,19 +837,21 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="60"/>
-		<property name="link" value="https://www.google.com"/>
+    <property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task30" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "This will definitely speed up your daily and repetitive tasks"/>
-		<property name="start" value="2021/09/25 08:00"/>
+		<property name="start" value="2021/09/25 09:00"/>
 		<property name="end" value="2022/09/26 11:00"/>
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="75"/>
 		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -820,11 +859,12 @@
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Different products require a different combination of tasks"/>
 		<property name="start" value="2021/09/27 06:00"/>
-		<property name="end" value="2022/09/28 08:00"/>
+		<property name="end" value="2022/09/28 09:00"/>
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="70"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -837,6 +877,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="80"/>
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -849,6 +890,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="65"/>
 		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -861,6 +903,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="20"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -873,6 +916,7 @@
 		<property name="finish" value="false"/>
 		<property name="workload" value="55"/>
 		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -880,11 +924,12 @@
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Estimate what is going to cost to train the tasks"/>
 		<property name="start" value="2021/12/07 05:00"/>
-		<property name="end" value="2022/12/08 09:00"/>
+		<property name="end" value="2022/12/09 09:00"/>
 		<property name="publica" value="false"/>
 		<property name="finish" value="false"/>
 		<property name="workload" value="85"/>
 		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -897,6 +942,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -909,6 +955,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -920,7 +967,8 @@
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
-		<property name="link" value="https://www.google.com"/>
+    <property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -933,6 +981,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -945,6 +994,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -957,6 +1007,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -969,6 +1020,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -981,6 +1033,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -988,11 +1041,12 @@
 		<property name="title" value= "Political"/>
 		<property name="description" value= "Body or bodies carrying out control and audit tasks"/>
 		<property name="start" value="2021/12/25 05:00"/>
-		<property name="end" value="2022/12/26 08:00"/>
+		<property name="end" value="2022/12/26 09:00"/>
 		<property name="publica" value="false"/>
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -1005,6 +1059,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -1017,6 +1072,7 @@
 		<property name="finish" value="true"/>
 		<property name="workload" value="100"/>
 		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -1031,4 +1087,5 @@
 		<property name="link" value="https://www.google.com"/>
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	 
+
 </beans>
