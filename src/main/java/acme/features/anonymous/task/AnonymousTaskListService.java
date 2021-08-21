@@ -42,7 +42,7 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 		
 		Collection <Task>  result;
 		
-		result = this.repository.findTask().stream().sorted(Comparator.comparingDouble(Task::getWorkload)).collect(Collectors.toList());
+		result = this.repository.findTask().stream().sorted(Comparator.comparingInt(Task::getTime)).collect(Collectors.toList());
 
 		return result;
 	}

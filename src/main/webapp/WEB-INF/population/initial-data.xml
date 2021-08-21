@@ -72,5 +72,7 @@
 	<bean name="administratorAuthenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
-	
+	<bean id="thresh" class="acme.entities.threshold.Threshold">
+		<property name="thresholdword" value="10" />
+	</bean>
 </beans>

@@ -10,11 +10,11 @@ import javax.validation.Valid;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.datatypes.Workload;
 import acme.entities.roles.Manag;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -58,11 +58,15 @@ public class Task extends DomainEntity {
 	@NotNull
 	protected Boolean finish;
 	
-	@Positive
+	@Valid
 	@NotNull
-	protected Double workload;
+	protected Workload workload;
+	
+	// Derived attributes -----------------------------------------------------
 
-
+	public Integer getTime(){
+		return this.workload.getTime();
+	}
 		// Relationships ----------------------------------------------------------
 	
 		@NotNull

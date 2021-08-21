@@ -464,7 +464,7 @@
 		<property name="end" value="2022/10/07 00:00"/>
 		<property name="publica" value="true"/>
 		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="40.00"/>
 		<property name="link" value="https://www.microsoft.com"/>
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	 
