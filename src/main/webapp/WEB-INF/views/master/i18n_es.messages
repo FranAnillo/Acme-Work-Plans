@@ -16,7 +16,7 @@ master.banner.background = #FFE97F
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	Bienvenidos a Acme Stater!  Nunca antes ha sido tan sencillo desarrollar un \
+	Bienvenidos a Acme Work Plans!  Nunca antes ha sido tan sencillo desarrollar un \
 	proyecto y hacerlo funcionar.
 
 # master.menu #################################################################
@@ -94,10 +94,10 @@ master.footer.label.spanish = Español
 
 master.company.title = La compañía
 master.company.text = \
-	Acme Planner es un proyecto \
+	Acme Work Plans es un proyecto \
 	para la asignatura Diseño y Pruebas, en el Grado \
 	en Ingeniería del Software de la Universidad de Sevilla.
-master.company.name = Acme-Planner
+master.company.name = Acme-Work-Plans
 master.company.address = Reina Mercedes, Nº10, Sevilla, España
 master.company.phone = +34 123 456 789
 master.company.email = contact@acme.com
