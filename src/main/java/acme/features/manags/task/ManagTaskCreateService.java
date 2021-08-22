@@ -79,13 +79,20 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
 		if (!errors.hasErrors("end")) {
 			errors.state(request, entity.getEnd().after(entity.getStart()), "end", "manag.task.error.end");
 		}
-
-		if (!errors.hasErrors("workload")&&!errors.hasErrors("start")&&!errors.hasErrors("end")) {
-			errors.state(request, entity.getWorkload() < Filter.calculate(entity.getStart(), entity.getEnd()), "workload", "manag.task.error.workload");
+//		if (!errors.hasErrors("workload")) {
+//			errors.state(request, entity.getWorkload()!=null, "workload", "manag.task.error.workload");
+//		}
+		if(!errors.hasErrors("workload")) {
+			
+		}
+//		if((!errors.hasErrors("workload"))) {
+//			errors.state(request, entity.getWorkload(), "workload", "acme.validation.decimal-max", null);
+//		}
+		if (!errors.hasErrors("start")&&!errors.hasErrors("end")&&!errors.hasErrors("workload")) {
+			errors.state(request, Filter.calculate(entity.getStart(), entity.getEnd(), entity.getWorkload()), "title", "acme.validation.decimal-max",Filter.calculate(entity.getStart(),  entity.getEnd()));
 		}
 
 		if (!errors.hasErrors("description")) {
@@ -95,6 +102,8 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		if (!errors.hasErrors("title")) {
 			errors.state(request, this.filterString(entity.getTitle()), "title", "manag.task.form.error.title");
 		}
+	
+
 	}
 
 	@Override
