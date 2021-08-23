@@ -2,6 +2,7 @@ package acme.forms;
 
 import java.io.Serializable;
 
+import acme.datatypes.Workload;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,20 +14,20 @@ public class Dashboard implements Serializable{
 	
 
 	Double averageExecutionPeriods;
-	Double deviationExcutionPeriods;
+	Double deviationExecutionPeriods;
 	Double minimumExecutionPeriods;
 	Double maximumExecutionPeriods;
 
-
-
-	Double numberOfPublicTask;
-	Double numberOfPrivateTask;
-	Double numberOfFinishTask;
-	Double numberOfNotFinishTask;
+	Integer numberOfPublicTask;
+	Integer numberOfPrivateTask;
 	
-	Integer minimumWorkload;
-	Integer maximumWorkload;
-	Double averageWorkload;
+	Integer numberOfFinishTask;
+	Integer numberOfNotFinishTask;
+	
+	Workload minimumWorkload;
+	Workload maximumWorkload;
+	
+	Float averageWorkload;
 	Double deviationWorkload;
 	
 }

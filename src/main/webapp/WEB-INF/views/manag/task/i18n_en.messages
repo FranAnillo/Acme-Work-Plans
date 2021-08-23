@@ -27,6 +27,6 @@ manag.task.label.publica=Public
 manag.task.button.return=Return
 manag.task.form.button.create = Create
 manag.task.button.delete= Delete
-
+manag.task.button.update=Update
 manag.task.form.error.title= The title has spam words
 manag.task.form.error.description= The description has spam words

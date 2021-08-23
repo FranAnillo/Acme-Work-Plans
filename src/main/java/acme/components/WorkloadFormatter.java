@@ -22,16 +22,14 @@ public class WorkloadFormatter implements Formatter<Workload> {
 
 		String result;
 
-		String hour,minute,dot;
-
-
-
-		
-		
+		String hour,minute;
+	
 		hour = String.format("%s",workload.getHours());
-		minute = workload.getMinutes()==null ?"":String.format("%s",workload.getMinutes());
-		dot = workload.getMinutes()==null ?"":String.format("%s",".");	
-		result = String.format("%s%s%s", hour,dot, minute);
+		minute = workload.getMinutes()==0||workload.getMinutes()==null ?"":String.format("%s",workload.getMinutes());
+		
+		if  (workload.getMinutes()==0)result = String.format("%s.00", hour);
+		else if (workload.getMinutes()<10)result = String.format("%s.0%s", hour, minute);
+		else result = String.format("%s.%s", hour, minute);
 		
 		return result;
 	}
@@ -41,45 +39,43 @@ public class WorkloadFormatter implements Formatter<Workload> {
 		assert locale != null;
 
 		Workload result;
-		String regex,hour,minute,punto;
+		String regex;
 		Pattern pattern;
 		Matcher matcher;
 		String errorMessage;
 		String hoursText,minutesText;
+		String hoursRegex,minutesRegex;
 		int hours, minutes;
 		
-		hour="\\d{0,2}" ;
-		punto="\\.";
-		minute="\\d{0,2})"; 
+		hoursRegex= "\\d{1,2}";
+		minutesRegex= "\\d{2}";
 		
-		
-		regex = String.format("^\\s*(?<H>\\d{0,2})\\.(?<M>\\d{0,2}))\\s*$");
+		regex = String.format("^\\s*(?<H>%1$s)\\.(?<M>%2$s)\\s*$",hoursRegex,minutesRegex);
 		pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
 
 		matcher = pattern.matcher(text);
-		if (!matcher.find()) {
+				
+		final boolean regexe1=!matcher.find();
+
+		if (regexe1) {
 			errorMessage = MessageHelper.getMessage("default.error.conversion", null, "Invalid value", locale);
 			throw new ParseException(0, errorMessage);
 		} else {
-			
 				hoursText =matcher.group("H");
 				hours = Integer.valueOf(hoursText);
 
 				minutesText =matcher.group("M");
 				minutes = Integer.valueOf(minutesText);
 				
-				
 				result = new Workload();
 				result.setHours(hours);
 				result.setMinutes(minutes);
-			
 				
-				
-			
-			
 		}
 
 		return result;
+		
 	}
+	
 
 }

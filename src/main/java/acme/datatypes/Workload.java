@@ -34,6 +34,7 @@ public class Workload extends DomainDatatype {
 			result.append(this.hours);
 			if (this.minutes!=null) {
 			result.append(".");
+			if (this.minutes<10) result.append("0");
 			result.append(this.minutes);
 			}
 			result.append(">>");

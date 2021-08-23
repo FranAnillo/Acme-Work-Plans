@@ -23,8 +23,8 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 	@Autowired
 	protected ManagTaskRepository						repository;
 
-	@Autowired
-	protected AdministratorThresholdRepository			thresholdRepository;
+		@Autowired
+		protected AdministratorThresholdRepository			thresholdRepository;
 
 	@Autowired
 	protected AdministratorPersonalizationRepository	personalizationRepository;
@@ -52,7 +52,7 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "description", "link", "publica");
+		request.unbind(entity, model, "title", "description","start","end", "link","workload", "publica");
 	}
 
 	@Override
@@ -82,17 +82,13 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		if (!errors.hasErrors("end")) {
 			errors.state(request, entity.getEnd().after(entity.getStart()), "end", "manag.task.error.end");
 		}
-//		if (!errors.hasErrors("workload")) {
-//			errors.state(request, entity.getWorkload()!=null, "workload", "manag.task.error.workload");
-//		}
-		if(!errors.hasErrors("workload")) {
-			
+		
+		if((!errors.hasErrors("workload"))) {
+			errors.state(request, entity.getWorkload().getMinutes()<=59, "workload", "default.error.workload");
 		}
-//		if((!errors.hasErrors("workload"))) {
-//			errors.state(request, entity.getWorkload(), "workload", "acme.validation.decimal-max", null);
-//		}
+		
 		if (!errors.hasErrors("start")&&!errors.hasErrors("end")&&!errors.hasErrors("workload")) {
-			errors.state(request, Filter.calculate(entity.getStart(), entity.getEnd(), entity.getWorkload()), "title", "acme.validation.decimal-max",Filter.calculate(entity.getStart(),  entity.getEnd()));
+			errors.state(request, Filter.calculate(entity.getStart(), entity.getEnd(), entity.getWorkload()), "workload", "acme.validation.decimal-max",Filter.calculate(entity.getStart(),  entity.getEnd()));
 		}
 
 		if (!errors.hasErrors("description")) {

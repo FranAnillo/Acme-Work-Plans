@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 <%@page language="java"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -15,8 +27,8 @@
 	<acme:form-textbox code="manag.task.label.link" path="link" />
 	<acme:form-checkbox code="manag.task.label.publica" path="publica"/>
 	<acme:form-submit test="${command == 'create'}" code="manag.task.form.button.create" action="/manag/task/create"/>
-	<acme:form-submit test="${command == 'delete'}" code="manag.task.form.button.delete" action="/manag/task/create"/>		
-		
+	<acme:form-submit test="${command == 'show'}" code="manag.task.button.delete" action="/manag/task/delete"/>		
+	<acme:form-submit test="${command == 'show'}" code="manag.task.button.update" action="/manag/task/update"/>	
 	<acme:form-return code="manag.task.button.return" />
 
 

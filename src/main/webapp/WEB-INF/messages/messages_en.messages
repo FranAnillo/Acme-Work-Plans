@@ -19,6 +19,8 @@ default.placeholder.integer = 123,456
 default.placeholder.url = http://www.acme.com
 default.placeholder.workload = 50.40
 
+default.error.workload = The minutes must be greater or equal to 59
+
 default.error.conversion = Invalid value
 default.error.endpoint-unavailable = End-point not available
 default.error.not-authorised = Access is not authorised

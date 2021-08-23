@@ -11,15 +11,19 @@
  */
 
 package acme.features.manags.task;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manag;
 import acme.entities.tasks.Task;
+import acme.features.administrator.personalization.AdministratorPersonalizationRepository;
+import acme.features.administrator.threshold.AdministratorThresholdRepository;
+import acme.filter.Filter;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
@@ -30,13 +34,26 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 	@Autowired
 	protected ManagTaskRepository repository;
 	
+	@Autowired
+	protected AdministratorThresholdRepository			thresholdRepository;
+
+	@Autowired
+	protected AdministratorPersonalizationRepository	personalizationRepository;
+
 	// AbstractUpdateService<Authenticated, Provider> interface ---------------
 	
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
-		
-		return true;
+		boolean result;
+		int taskId;
+		Task task;
+
+		taskId = request.getModel().getInteger("id");
+		task = this.repository.findOneTaskById(taskId);
+		result = task != null && task.getManag().getId() == request.getPrincipal().getActiveRoleId();
+
+		return result;
 	}
 
 	@Override
@@ -54,7 +71,8 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "start","description", "end", "workload");
+		request.unbind(entity, model, "title","description", "start", "end", "workload","link", "publica");
+		model.setAttribute("taskd", entity.getId());
 	}
 
 	@Override
@@ -62,13 +80,12 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 		assert request != null;
 		
 		Task result;
-		Principal principal;
-		int userAccountId;
 		
-		principal = request.getPrincipal();
-		userAccountId = principal.getAccountId();
+		int id;
 		
-		result = this.repository.findOneTaskById(userAccountId);
+		id = request.getModel().getInteger("id");
+		
+		result = this.repository.findOneTaskById(id);
 		
 		return result;
 	}
@@ -78,6 +95,26 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		if (!errors.hasErrors("end")) {
+			errors.state(request, entity.getEnd().after(entity.getStart()), "end", "manag.task.error.end");
+		}
+		
+		if((!errors.hasErrors("workload"))) {
+			errors.state(request, entity.getWorkload().getMinutes()<=59, "workload", "default.error.workload");
+		}
+		
+		if (!errors.hasErrors("start")&&!errors.hasErrors("end")&&!errors.hasErrors("workload")) {
+			errors.state(request, Filter.calculate(entity.getStart(), entity.getEnd(), entity.getWorkload()), "workload", "acme.validation.decimal-max",Filter.calculate(entity.getStart(),  entity.getEnd()));
+		}
+
+		if (!errors.hasErrors("description")) {
+			errors.state(request, this.filterString(entity.getDescription()), "description", "manag.task.form.error.description");
+		}
+
+		if (!errors.hasErrors("title")) {
+			errors.state(request, this.filterString(entity.getTitle()), "title", "manag.task.form.error.title");
+		}
 	}
 
 	@Override
@@ -86,6 +123,24 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 		assert entity != null;
 
 		this.repository.save(entity);
+	}
+	public boolean filterString(final String s) {
+		final String j = s.replace(" ", ";");
+		final int number = j.split(";").length;
+		final String[] palabras = j.split(";");
+		float numberBannedWords = 0;
+		final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
+		for (int i = 0; censoredWords.size() > i; i++) {
+			for (int k = 0; palabras.length > k; k++) {
+				if (palabras[k].equalsIgnoreCase(censoredWords.get(i))) {
+					numberBannedWords = numberBannedWords + 1;
+				}
+			}
+		}
+		if ((numberBannedWords * 100 / number) >= this.thresholdRepository.findThresholdById())
+			return false;
+
+		return true;
 	}
 
 }
