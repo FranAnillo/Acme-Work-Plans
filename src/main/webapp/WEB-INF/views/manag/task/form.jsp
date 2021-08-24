@@ -22,9 +22,9 @@
 	<acme:form-textbox code="manag.task.label.description"
 		path="description" />
 	<acme:form-textbox code="manag.task.label.workload" path="workload" />
-	<acme:form-textbox code="manag.task.start" path="start" />
-	<acme:form-textbox code="manag.task.end" path="end" />
-	<acme:form-textbox code="manag.task.label.link" path="link" />
+	<acme:form-moment code="manag.task.start" path="start" />
+	<acme:form-moment code="manag.task.end" path="end" />
+	<acme:form-url code="manag.task.label.link" path="link" />
 	<acme:form-submit test="${command == 'create'}" code="manag.task.form.button.create" action="/manag/task/create"/>
 	<acme:form-submit test="${command == 'show' && publica == 'false'}" code="manag.task.button.delete" action="/manag/task/delete"/>		
 	<acme:form-submit test="${command == 'show' && publica == 'false'}" code="manag.task.button.update" action="/manag/task/update"/>	

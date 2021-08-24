@@ -126,18 +126,19 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
             for (int k = 0; palabras.length > k; k++) {
 
                 final int numberOfCensoredString = censoredWords.get(i).replace(" ", ";").split(";").length;
-                String bannedString = palabras[i];
+                String bannedString = palabras[k];
 
                 if (bannedString == null || bannedString.isEmpty())
                     break;
-                for (int w = 1; numberOfCensoredString > w; w++) {
+                for (int w = 1; numberOfCensoredString > (w+i); w++) {
 
-                    while (i + w < palabras.length && (palabras[i + w].isEmpty() ||  palabras[i + w] == null)) {
+                	
+                    while (k + w < palabras.length && palabras[k + w].isEmpty()) {
                         w++;
                     }
-                    if (i + w >= palabras.length)
+                    if (k + w >= palabras.length)
                         break;
-                    bannedString = bannedString + ";" + palabras[i + w];
+                    bannedString = bannedString + ";" + palabras[k + w];
                 }
                 if (palabras[k].equalsIgnoreCase(bannedString)) {
                     numberBannedWords = numberBannedWords + numberOfCensoredString;
@@ -153,7 +154,8 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
         return true;
 
     }
+    }
 		
 
-	}
+	
 
