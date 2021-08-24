@@ -52,11 +52,8 @@ public class Task extends DomainEntity {
 	@URL
 	protected String link;
 	
-	@NotNull
-	protected Boolean publica;
 	
-	@NotNull
-	protected Boolean finish;
+	protected Boolean publica;
 	
 	@Valid
 	@NotNull
@@ -66,6 +63,21 @@ public class Task extends DomainEntity {
 
 	public Integer getTime(){
 		return this.workload.getTime();
+	}
+	public boolean isPublishable() {
+		boolean result;
+		Date now;
+
+		now = new Date();
+		result = !this.publica && now.before(this.end);
+
+		return result;
+	}
+	public boolean isFinished() {
+		Date now;
+
+		now = new Date();
+		return this.end.after(now);
 	}
 		// Relationships ----------------------------------------------------------
 	

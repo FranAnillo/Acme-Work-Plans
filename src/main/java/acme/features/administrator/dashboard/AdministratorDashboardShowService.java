@@ -64,8 +64,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		numberOfPublicTask = this.repository.numberOfPublicTask();
 		numberOfPrivateTask = this.repository.numberOfPrivateTask();
 		
-		numberOfFinishTask = this.repository.numberOfFinishTask();
-		numberOfNotFinishTask = this.repository.numberOfNotFinishTask();
+		numberOfFinishTask = (int) this.repository.findTasks().stream().filter(x->x.isFinished()).count();
+		numberOfNotFinishTask =  this.repository.findTasks().size()-numberOfFinishTask;
 				
 		averageExecutionPeriods = 0.0;
 		maximumExecutionPeriods = 0.0;

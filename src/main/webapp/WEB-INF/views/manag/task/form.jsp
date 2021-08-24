@@ -25,10 +25,13 @@
 	<acme:form-textbox code="manag.task.start" path="start" />
 	<acme:form-textbox code="manag.task.end" path="end" />
 	<acme:form-textbox code="manag.task.label.link" path="link" />
-	<acme:form-checkbox code="manag.task.label.publica" path="publica"/>
 	<acme:form-submit test="${command == 'create'}" code="manag.task.form.button.create" action="/manag/task/create"/>
-	<acme:form-submit test="${command == 'show'}" code="manag.task.button.delete" action="/manag/task/delete"/>		
-	<acme:form-submit test="${command == 'show'}" code="manag.task.button.update" action="/manag/task/update"/>	
+	<acme:form-submit test="${command == 'show' && publica == 'false'}" code="manag.task.button.delete" action="/manag/task/delete"/>		
+	<acme:form-submit test="${command == 'show' && publica == 'false'}" code="manag.task.button.update" action="/manag/task/update"/>	
+	<acme:form-submit test="${command == 'show' && publica == 'false'}" code="manag.task.button.publish" action="/manag/task/publish"/>
+	<acme:form-submit test="${command == 'delete'}" code="manag.task.button.delete" action="/manag/task/delete"/>		
+	<acme:form-submit test="${command == 'update'}" code="manag.task.button.update" action="/manag/task/update"/>	
+	<acme:form-submit test="${command == 'publish'}" code="employer.job.form.button.publish" action="/manag/task/publish"/>
 	<acme:form-return code="manag.task.button.return" />
 
 

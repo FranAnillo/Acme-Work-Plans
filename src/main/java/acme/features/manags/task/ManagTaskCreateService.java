@@ -68,7 +68,6 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		result.setDescription("Description of the taks 2");
 		result.setLink("http://example.org");
 		result.setPublica(false);
-		result.setFinish(false);
 		result.setManag(manag);
 
 		return result;
@@ -107,26 +106,46 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		assert request != null;
 		assert entity != null;
 
-		entity.setFinish(false);
+		entity.setPublica(false);
 		this.repository.save(entity);
 	}
 	public boolean filterString(final String s) {
+		
 		final String j = s.replace(" ", ";");
-		final int number = j.split(";").length;
 		final String[] palabras = j.split(";");
 		float numberBannedWords = 0;
+		float numberOfWords= 1;
 		final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
+		
 		for (int i = 0; censoredWords.size() > i; i++) {
 			for (int k = 0; palabras.length > k; k++) {
-				if (palabras[k].equalsIgnoreCase(censoredWords.get(i))) {
-					numberBannedWords = numberBannedWords + 1;
+				
+				final int numberOfCensoredString=censoredWords.get(i).replace(" ", ";").length();
+				String bannedString = censoredWords.get(i);
+				
+				if(bannedString==null||bannedString.isBlank()) break;
+				for(int w=1;numberOfCensoredString>w;w++) {
+					
+					while(i+w<palabras.length&&(palabras[i+w].isBlank()||palabras[i+w]==null)) { 
+						w++;
+					}
+					if (i+w>=palabras.length) break;
+				bannedString= bannedString+";"+palabras[i+w];
+				numberOfWords++;
 				}
+				if (palabras[k].equalsIgnoreCase(bannedString)) {
+					numberBannedWords = numberBannedWords + 1;
 			}
 		}
-		if ((numberBannedWords * 100 / number) >= this.thresholdRepository.findThresholdById())
+	}		
+		System.out.println(numberOfWords);
+		if ((numberBannedWords * 100 / numberOfWords) >= this.thresholdRepository.findThresholdById()) {
+			
 			return false;
-
+		}
 		return true;
+		
+
 	}
 
 }

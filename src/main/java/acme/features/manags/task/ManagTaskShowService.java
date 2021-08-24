@@ -32,7 +32,7 @@ public class ManagTaskShowService implements AbstractShowService<Manag, Task> {
 		principal=request.getPrincipal();
 		manag=task.getManag();
 		
-		result = manag.getUserAccount().getId()==principal.getAccountId();
+		result =task.getPublica() || !task.getPublica() && manag.getUserAccount().getId()==principal.getAccountId();
 		return result;
 	}
 
@@ -42,7 +42,7 @@ public class ManagTaskShowService implements AbstractShowService<Manag, Task> {
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "description", "start", "end", "link", "workload");
+		request.unbind(entity, model, "title", "description", "start", "end", "link", "workload","publica");
 		model.setAttribute("taskId", entity.getId());
 	}
 

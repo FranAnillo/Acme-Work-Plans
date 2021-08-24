@@ -33,7 +33,7 @@ public class ManagTaskDeleteService implements AbstractDeleteService<Manag, Task
 		task = this.repository.findOneTaskById(taskId);
 		manag = task.getManag();
 		principal = request.getPrincipal();
-		result = manag.getUserAccount().getId() == principal.getAccountId();
+		result = !task.getPublica()&& manag.getUserAccount().getId() == principal.getAccountId();
 
 		return result;
 	}

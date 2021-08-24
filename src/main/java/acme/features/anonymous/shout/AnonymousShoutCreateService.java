@@ -95,22 +95,27 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	}
 
 	public boolean filterString(final String s) {
-		final String j = s.replace(" ", ";");
-		final int number = j.split(";").length;
-		final String[] palabras = j.split(";");
-		float numberBannedWords = 0;
+		s.toLowerCase();
+		s.trim();
 		final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
+		final int numberOfWords = s.replace(" ", ";").split(";").length;
+		float numberBannedWords = 0;
 		for (int i = 0; censoredWords.size() > i; i++) {
-			for (int k = 0; palabras.length > k; k++) {
-				if (palabras[k].equalsIgnoreCase(censoredWords.get(i))) {
-					numberBannedWords = numberBannedWords + 1;
-				}
+			final String bannedWord= censoredWords.get(i).trim();
+			final int a=s.indexOf(bannedWord);
+			final int b= s.lastIndexOf(bannedWord);
+
+			while (a!=-1) {
+			numberBannedWords++;	
+				s.substring(b);
 			}
-		}
-		if ((numberBannedWords * 100 / number) >= this.thresholdRepository.findThresholdById())
+		}	
+		if ((numberBannedWords * 100 / numberOfWords) >= this.thresholdRepository.findThresholdById())
 			return false;
 
 		return true;
+		
+		
 	}
 
 }
