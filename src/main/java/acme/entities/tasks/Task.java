@@ -64,12 +64,13 @@ public class Task extends DomainEntity {
 	public Integer getTime(){
 		return this.workload.getTime();
 	}
+	
 	public boolean isPublishable() {
 		boolean result;
 		Date now;
 
 		now = new Date();
-		result = !this.publica && now.before(this.end);
+		result = !this.publica && now.before(this.start);
 
 		return result;
 	}
