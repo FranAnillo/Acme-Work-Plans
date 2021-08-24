@@ -78,7 +78,7 @@ public class Task extends DomainEntity {
 		Date now;
 
 		now = new Date();
-		return this.end.after(now);
+		return this.end.before(now);
 	}
 		// Relationships ----------------------------------------------------------
 	
