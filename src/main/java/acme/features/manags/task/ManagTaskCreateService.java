@@ -110,42 +110,50 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		this.repository.save(entity);
 	}
 	public boolean filterString(final String s) {
-		
-		final String j = s.replace(" ", ";");
-		final String[] palabras = j.split(";");
-		float numberBannedWords = 0;
-		float numberOfWords= 1;
-		final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
-		
-		for (int i = 0; censoredWords.size() > i; i++) {
-			for (int k = 0; palabras.length > k; k++) {
-				
-				final int numberOfCensoredString=censoredWords.get(i).replace(" ", ";").length();
-				String bannedString = censoredWords.get(i);
-				
-				if(bannedString==null||bannedString.isBlank()) break;
-				for(int w=1;numberOfCensoredString>w;w++) {
-					
-					while(i+w<palabras.length&&(palabras[i+w].isBlank()||palabras[i+w]==null)) { 
-						w++;
-					}
-					if (i+w>=palabras.length) break;
-				bannedString= bannedString+";"+palabras[i+w];
-				numberOfWords++;
-				}
-				if (palabras[k].equalsIgnoreCase(bannedString)) {
-					numberBannedWords = numberBannedWords + 1;
-			}
-		}
-	}		
-		System.out.println(numberOfWords);
-		if ((numberBannedWords * 100 / numberOfWords) >= this.thresholdRepository.findThresholdById()) {
-			
-			return false;
-		}
-		return true;
+        final String j = s.replace("\s", ";");
+        final String[] palabras = j.split(";");
+        float numberBannedWords = 0;
+        float numberOfWords = 0;
+        final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
+
+        for (int x = 0; palabras.length > x; x++) {
+            if (!palabras[x].isEmpty()) {
+                numberOfWords++;
+            }
+        }
+
+        for (int i = 0; censoredWords.size() > i; i++) {
+            for (int k = 0; palabras.length > k; k++) {
+
+                final int numberOfCensoredString = censoredWords.get(i).replace(" ", ";").split(";").length;
+                String bannedString = palabras[i];
+
+                if (bannedString == null || bannedString.isEmpty())
+                    break;
+                for (int w = 1; numberOfCensoredString > w; w++) {
+
+                    while (i + w < palabras.length && (palabras[i + w].isEmpty() ||  palabras[i + w] == null)) {
+                        w++;
+                    }
+                    if (i + w >= palabras.length)
+                        break;
+                    bannedString = bannedString + ";" + palabras[i + w];
+                }
+                if (palabras[k].equalsIgnoreCase(bannedString)) {
+                    numberBannedWords = numberBannedWords + numberOfCensoredString;
+                }
+
+            }
+        }
+
+        if ((numberBannedWords * 100 / numberOfWords) >= this.thresholdRepository.findThresholdById()) {
+
+            return false;
+        }
+        return true;
+
+    }
 		
 
 	}
 
-}

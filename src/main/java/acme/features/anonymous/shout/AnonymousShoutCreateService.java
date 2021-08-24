@@ -95,27 +95,48 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	}
 
 	public boolean filterString(final String s) {
-		s.toLowerCase();
-		s.trim();
-		final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
-		final int numberOfWords = s.replace(" ", ";").split(";").length;
-		float numberBannedWords = 0;
-		for (int i = 0; censoredWords.size() > i; i++) {
-			final String bannedWord= censoredWords.get(i).trim();
-			final int a=s.indexOf(bannedWord);
-			final int b= s.lastIndexOf(bannedWord);
+        final String j = s.replace("\s", ";");
+        final String[] palabras = j.split(";");
+        float numberBannedWords = 0;
+        float numberOfWords = 0;
+        final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
 
-			while (a!=-1) {
-			numberBannedWords++;	
-				s.substring(b);
-			}
-		}	
-		if ((numberBannedWords * 100 / numberOfWords) >= this.thresholdRepository.findThresholdById())
-			return false;
+        for (int x = 0; palabras.length > x; x++) {
+            if (!palabras[x].isEmpty()) {
+                numberOfWords++;
+            }
+        }
 
-		return true;
-		
-		
-	}
+        for (int i = 0; censoredWords.size() > i; i++) {
+            for (int k = 0; palabras.length > k; k++) {
+
+                final int numberOfCensoredString = censoredWords.get(i).replace(" ", ";").split(";").length;
+                String bannedString = palabras[i];
+
+                if (bannedString == null || bannedString.isEmpty())
+                    break;
+                for (int w = 1; numberOfCensoredString > w; w++) {
+
+                    while (i + w < palabras.length && (palabras[i + w].isEmpty() || palabras[i + w] == null)) {
+                        w++;
+                    }
+                    if (i + w >= palabras.length)
+                        break;
+                    bannedString = bannedString + ";" + palabras[i + w];
+                }
+                if (palabras[k].equalsIgnoreCase(bannedString)) {
+                    numberBannedWords = numberBannedWords + numberOfCensoredString;
+                }
+
+            }
+        }
+
+        if ((numberBannedWords * 100 / numberOfWords) >= this.thresholdRepository.findThresholdById()) {
+
+            return false;
+        }
+        return true;
+
+    }
 
 }

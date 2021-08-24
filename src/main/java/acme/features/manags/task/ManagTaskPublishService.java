@@ -65,13 +65,12 @@ public class ManagTaskPublishService implements AbstractUpdateService<Manag, Tas
 
 		Calendar calendar;
 		Date minimumDeadline;
-		final Task existing;
 
-		if (!errors.hasErrors("deadline")) {
+		if (!errors.hasErrors("start")) {
 			calendar = new GregorianCalendar();
 			calendar.add(Calendar.WEEK_OF_MONTH, 1);
 			minimumDeadline = calendar.getTime();
-			errors.state(request, entity.getStart().after(minimumDeadline), "deadline", "employer.job.form.error.too-close");
+			errors.state(request, entity.getStart().after(minimumDeadline), "start", "manag.task.form.error.too-close");
 		}
 	}
 
