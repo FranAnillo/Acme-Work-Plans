@@ -463,7 +463,6 @@
 		<property name="start" value="2021/10/07 00:00"/>
 		<property name="end" value="2022/10/07 00:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
 		<property name="workload" value="40.00"/>
 		<property name="link" value="https://www.microsoft.com"/>
 		<property name="manag" ref="manag1Employer"/>
@@ -476,8 +475,7 @@
 		<property name="start" value="2021/10/08 01:00"/>
 		<property name="end" value="2022/10/08 02:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="30"/>
+		<property name="workload" value="30.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag2Employer"/>
@@ -489,8 +487,7 @@
 		<property name="start" value="2021/10/09 03:00"/>
 		<property name="end" value="2022/10/07 06:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="50"/>
+		<property name="workload" value="50.00"/>
 		<property name="link" value="https://www.as.com"/>
 
 		<property name="manag" ref="manag3Employer"/>
@@ -502,9 +499,7 @@
 		<property name="start" value="2021/10/12 00:00"/>
 		<property name="end" value="2022/10/16 03:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="60"/>
-
+		<property name="workload" value="60.00"/>
 		<property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -516,8 +511,7 @@
 		<property name="start" value="2021/10/18 00:00"/>
 		<property name="end" value="2022/10/22 06:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="40.00"/>
 		<property name="link" value="https://www.microsoft.com"/>
 
 		<property name="manag" ref="manag5Employer"/>
@@ -529,8 +523,7 @@
 		<property name="start" value="2021/10/17 02:00"/>
 		<property name="end" value="2022/10/27 09:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="40.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag1Employer"/>
@@ -542,8 +535,7 @@
 		<property name="start" value="2021/10/25 03:00"/>
 		<property name="end" value="2022/10/28 09:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="40.00"/>
 
 		<property name="link" value="https://www.microsoft.com"/>
 
@@ -556,8 +548,7 @@
 		<property name="start" value="2021/11/06 00:00"/>
 		<property name="end" value="2022/11/13 05:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="25"/>
+		<property name="workload" value="25.00"/>
 		<property name="link" value="https://www.as.com"/>
 
 		<property name="manag" ref="manag3Employer"/>
@@ -569,8 +560,7 @@
 		<property name="start" value="2021/11/18 02:00"/>
 		<property name="end" value="2022/11/22 04:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="35"/>
+		<property name="workload" value="35.00"/>
 		<property name="link" value="https://www.microsoft.com"/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -582,8 +572,7 @@
 		<property name="start" value="2021/11/25 01:00"/>
 		<property name="end" value="2022/11/28 06:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="40.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag5Employer"/>
@@ -595,8 +584,7 @@
 		<property name="start" value="2021/10/03 01:00"/>
 		<property name="end" value="2022/10/04 04:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="45"/>
+		<property name="workload" value="45.00"/>
 		<property name="link" value="https://www.microsoft.com"/>
 
 		<property name="manag" ref="manag1Employer"/>
@@ -608,8 +596,7 @@
 		<property name="start" value="2021/10/13 05:00"/>
 		<property name="end" value="2022/10/14 07:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="55"/>
+		<property name="workload" value="55.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag2Employer"/>
@@ -621,8 +608,7 @@
 		<property name="start" value="2021/10/15 02:00"/>
 		<property name="end" value="2022/10/16 01:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
 		<property name="link" value="https://www.microsoft.com"/>
 
 		<property name="manag" ref="manag3Employer"/>
@@ -634,8 +620,7 @@
 		<property name="start" value="2021/10/18 00:00"/>
 		<property name="end" value="2022/10/21 04:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="90.00"/>
 		<property name="link" value="https://www.as.com"/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -647,8 +632,7 @@
 		<property name="start" value="2021/10/23 06:00"/>
 		<property name="end" value="2022/10/24 10:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="70.00"/>
 		<property name="link" value="https://www.microsoft.com"/>
 
 		<property name="manag" ref="manag5Employer"/>
@@ -660,8 +644,7 @@
 		<property name="start" value="2021/11/02 02:00"/>
 		<property name="end" value="2022/11/03 04:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="20.00"/>
 
 		<property name="link" value="https://www.microsoft.com"/>
 
@@ -674,8 +657,7 @@
 		<property name="start" value="2021/11/05 09:00"/>
 		<property name="end" value="2022/11/06 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="50.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag2Employer"/>
@@ -687,8 +669,7 @@
 		<property name="start" value="2021/11/13 03:00"/>
 		<property name="end" value="2022/11/14 07:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="80.00"/>
 
 		<property name="link" value="https://www.youtube.com"/>
 
@@ -701,8 +682,7 @@
 		<property name="start" value="2021/12/14 06:00"/>
 		<property name="end" value="2022/12/16 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="60.00"/>
 		<property name="link" value="https://www.youtube.com"/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -714,8 +694,7 @@
 		<property name="start" value="2021/12/17 00:00"/>
 		<property name="end" value="2022/12/19 00:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="20.00"/>
 		<property name="link" value="https://www.youtube.com"/>
 
 		<property name="manag" ref="manag5Employer"/>
@@ -727,8 +706,7 @@
 		<property name="start" value="2021/12/20 02:00"/>
 		<property name="end" value="2022/08/21 07:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="40.00"/>
 		<property name="link" value="https://www.youtube.com"/>
 
 		<property name="manag" ref="manag1Employer"/>
@@ -740,8 +718,7 @@
 		<property name="start" value="2021/12/22 05:00"/>
 		<property name="end" value="2022/10/23 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="10.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag2Employer"/>
@@ -754,8 +731,7 @@
 		<property name="start" value="2021/12/24 00:00"/>
 		<property name="end" value="2022/08/25 10:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="15.00"/>
 		<property name="link" value="https://www.youtube.com"/>
 
 		<property name="manag" ref="manag3Employer"/>
@@ -768,8 +744,7 @@
 		<property name="start" value="2021/11/26 05:00"/>
 		<property name="end" value="2022/08/27 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="5.00"/>
 		<property name="link" value="https://www.youtube.com"/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -781,8 +756,7 @@
 		<property name="start" value="2021/11/11 02:00"/>
 		<property name="end" value="2022/09/12 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="45"/>
+		<property name="workload" value="10.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag5Employer"/>
@@ -794,8 +768,7 @@
 		<property name="start" value="2021/11/14 10:00"/>
 		<property name="end" value="2022/09/15 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="35"/>
+		<property name="workload" value="35.00"/>
 
 		<property name="link" value="https://www.youtube.com"/>
 
@@ -808,8 +781,7 @@
 		<property name="start" value="2021/10/17 10:00"/>
 		<property name="end" value="2022/09/18 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="55"/>
+		<property name="workload" value="55.00"/>
 
 		<property name="link" value="https://www.youtube.com"/>
 
@@ -822,8 +794,7 @@
 
 		<property name="end" value="2022/09/23 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="50"/>
+		<property name="workload" value="55.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag3Employer"/>
@@ -835,8 +806,7 @@
 		<property name="start" value="2021/09/24 05:00"/>
 		<property name="end" value="2022/09/25 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="60"/>
+		<property name="workload" value="60.00"/>
     <property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -848,8 +818,7 @@
 		<property name="start" value="2021/09/25 09:00"/>
 		<property name="end" value="2022/09/26 11:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="75"/>
+		<property name="workload" value="75.00"/>
 		<property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag5Employer"/>
@@ -861,8 +830,7 @@
 		<property name="start" value="2021/09/27 06:00"/>
 		<property name="end" value="2022/09/28 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="70"/>
+		<property name="workload" value="60.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag1Employer"/>
@@ -874,8 +842,7 @@
 		<property name="start" value="2021/09/29 09:00"/>
 		<property name="end" value="2022/09/30 11:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="80"/>
+		<property name="workload" value="80.00"/>
 		<property name="link" value="https://www.youtube.com"/>
 
 		<property name="manag" ref="manag2Employer"/>
@@ -887,8 +854,7 @@
 		<property name="start" value="2021/12/01 07:00"/>
 		<property name="end" value="2022/12/02 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="65"/>
+		<property name="workload" value="65.00"/>
 		<property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag3Employer"/>
@@ -900,8 +866,7 @@
 		<property name="start" value="2021/12/03 07:00"/>
 		<property name="end" value="2022/12/04 11:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="20"/>
+		<property name="workload" value="20.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -913,8 +878,7 @@
 		<property name="start" value="2021/12/05 10:00"/>
 		<property name="end" value="2022/12/06 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="55"/>
+		<property name="workload" value="55.00"/>
 		<property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag5Employer"/>
@@ -926,8 +890,7 @@
 		<property name="start" value="2021/12/07 05:00"/>
 		<property name="end" value="2022/12/09 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="85"/>
+		<property name="workload" value="85.00"/>
 		<property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag1Employer"/>
@@ -939,8 +902,7 @@
 		<property name="start" value="2021/12/09 07:00"/>
 		<property name="end" value="2022/12/10 10:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="96.00"/>
 		<property name="link" value="https://www.youtube.com"/>
 
 		<property name="manag" ref="manag2Employer"/>
@@ -952,8 +914,7 @@
 		<property name="start" value="2021/12/11 10:00"/>
 		<property name="end" value="2022/12/12 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="93.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag3Employer"/>
@@ -965,8 +926,7 @@
 		<property name="start" value="2021/12/13 06:00"/>
 		<property name="end" value="2022/12/14 10:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="87.00"/>
     <property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -978,8 +938,7 @@
 		<property name="start" value="2021/12/15 00:00"/>
 		<property name="end" value="2022/12/16 03:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="77.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag5Employer"/>
@@ -991,8 +950,7 @@
 		<property name="start" value="2021/12/17 03:00"/>
 		<property name="end" value="2022/12/18 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="88.00"/>
 		<property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag1Employer"/>
@@ -1004,8 +962,7 @@
 		<property name="start" value="2021/12/19 06:00"/>
 		<property name="end" value="2022/12/20 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="54.00"/>
 		<property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag2Employer"/>
@@ -1017,8 +974,7 @@
 		<property name="start" value="2021/12/21 00:00"/>
 		<property name="end" value="2022/12/22 04:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="23.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag3Employer"/>
@@ -1030,8 +986,7 @@
 		<property name="start" value="2021/12/23 02:00"/>
 		<property name="end" value="2022/12/24 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="24.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -1043,8 +998,7 @@
 		<property name="start" value="2021/12/25 05:00"/>
 		<property name="end" value="2022/12/26 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="37.00"/>
 		<property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag5Employer"/>
@@ -1056,8 +1010,7 @@
 		<property name="start" value="2021/12/27 07:00"/>
 		<property name="end" value="2022/12/28 10:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="94.00"/>
 		<property name="link" value="https://www.youtube.com"/>
 
 		<property name="manag" ref="manag1Employer"/>
@@ -1069,8 +1022,7 @@
 		<property name="start" value="2021/12/29 05:00"/>
 		<property name="end" value="2022/12/30 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="13.00"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag2Employer"/>
@@ -1082,8 +1034,7 @@
 		<property name="start" value="2021/10/29 09:00"/>
 		<property name="end" value="2022/08/30 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="18.00"/>
 		<property name="link" value="https://www.google.com"/>
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	 
