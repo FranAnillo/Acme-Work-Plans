@@ -21,7 +21,7 @@
 	<acme:form-textbox code="manag.task.label.title" path="title" />
 	<acme:form-textbox code="manag.task.label.description"
 		path="description" />
-	<acme:form-textbox code="manag.task.label.workload" path="workload" />
+	<acme:form-workload code="manag.task.label.workload" path="workload" />
 	<acme:form-moment code="manag.task.start" path="start" />
 	<acme:form-moment code="manag.task.end" path="end" />
 	<acme:form-url code="manag.task.label.link" path="link" />

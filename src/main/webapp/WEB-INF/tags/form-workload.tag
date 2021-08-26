@@ -1,5 +1,5 @@
 <%--
-- form-workload.tag
+- form-url.tag
 -
 - Copyright (C) 2012-2021 Rafael Corchuelo.
 -
@@ -38,7 +38,7 @@
 		id="${path}" 
 		name="${path}"
 		value="<acme:print value="${requestScope[path]}"/>"
-		type="workload"
+		type="text"
 		class="form-control"
 		placeHolder="${placeholder}"
 		<jstl:if test="${readonly}">
@@ -46,6 +46,5 @@
        	</jstl:if>
 	/>
 	<acme:form-errors path="${path}"/>
-	<acme:form-errors path="${path}.hours"/>
-	<acme:form-errors path="${path}.minutes"/>
 </div>
+

@@ -17,7 +17,7 @@ default.placeholder.money = 123.456,78 EUR
 default.placeholder.double = 123.456,78
 default.placeholder.integer = 123.456
 default.placeholder.url = http://www.acme.com
-default.placeholder.workload = 50.40
+default.placeholder.workload = hh.mm
 
 default.error.workload = Los minutos deben ser menor o igual a 59
 

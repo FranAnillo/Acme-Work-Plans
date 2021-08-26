@@ -3,25 +3,12 @@ package acme.filter;
 import java.util.Date;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import acme.datatypes.Workload;
-import acme.features.administrator.personalization.AdministratorPersonalizationRepository;
-import acme.features.administrator.threshold.AdministratorThresholdRepository;
 
 public class Filter {
 
 
 	// Internal state
-
-		@Autowired
-		protected  AdministratorPersonalizationRepository personalizationRepository;
-		
-		@Autowired
-		protected AdministratorThresholdRepository			thresholdRepository;
-		
-		List<String> censoredWords=  this.personalizationRepository.findCensoredWords();
-	
 	
 		public static boolean calculate(final Date start, final Date end, final Workload workload) {
 		return workload.getHours()*60+workload.getMinutes()<=(end.getTime() / 60000.00) - (start.getTime() / 60000.00);
@@ -41,5 +28,63 @@ public class Filter {
 		i= k+i;
 		return i;
 	}
+	
+	
+	
+	
+	
+	
+	
+	public static boolean filterString(final String s,final List<String> censoredWords, final int thresholdRepository) {
+		final String l =s.toLowerCase();
+        final String j = l.replace("\s", ";");
+        final String[] palabras = j.split(";");
+        float numberBannedWords = 0;
+        float numberOfWords = 0;
+        System.out.println(numberBannedWords);
 
-}
+        for (int x = 0; palabras.length > x; x++) {
+            if (!palabras[x].isEmpty()) {
+                numberOfWords++;
+            }
+        }
+
+        for (int i = 0; censoredWords.size() > i; i++) {
+            for (int k = 0; palabras.length > k; k++) {
+            	final String banned=censoredWords.get(i).replace(" ", ";");
+                final int numberOfCensoredString =banned.split(";").length;
+                String bannedString = palabras[k];
+                if (bannedString == null || bannedString.isEmpty())
+                    break;
+                for (int w = 1; numberOfCensoredString > (w+i); w++) {
+
+                    System.out.println(numberBannedWords);
+    	
+                    while (k + w < palabras.length && palabras[k + w].isEmpty()) {
+                        w++;
+                    }        System.out.println(numberBannedWords);
+
+                    if (k + w >= palabras.length)
+                        break;
+                    bannedString = bannedString + ";" + palabras[k + w];
+                }
+                if (banned.equals(bannedString)) {
+                    numberBannedWords = numberBannedWords + numberOfCensoredString;
+
+
+                }
+
+            }
+        }
+        
+        System.out.println(numberBannedWords);
+        if ((numberBannedWords * 100 / numberOfWords) >= thresholdRepository) {
+
+            return false;
+        }
+        return true;
+
+    }
+    }
+		
+
