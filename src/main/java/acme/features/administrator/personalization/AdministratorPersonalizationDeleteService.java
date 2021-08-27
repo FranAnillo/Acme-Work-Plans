@@ -1,3 +1,4 @@
+
 package acme.features.administrator.personalization;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,33 +10,35 @@ import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.entities.Principal;
-import acme.framework.services.AbstractCreateService;
+import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AdministratorPersonalizationCreateService implements AbstractCreateService<Administrator, Personalization>{
+public class AdministratorPersonalizationDeleteService implements AbstractDeleteService<Administrator, Personalization> {
 
 	@Autowired
 	protected AdministratorPersonalizationRepository repository;
-	
+
+
 	@Override
 	public boolean authorise(final Request<Personalization> request) {
 		assert request != null;
+
 
 		Principal principal;
 
 		principal=request.getPrincipal();
 		
 		return principal.hasRole("acme.framework.entities.Administrator");	
-		}
+	}
 
 	@Override
 	public void bind(final Request<Personalization> request, final Personalization entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
+
 		request.bind(entity, errors);
-		
+
 	}
 
 	@Override
@@ -44,18 +47,19 @@ public class AdministratorPersonalizationCreateService implements AbstractCreate
 		assert entity != null;
 		assert model != null;
 
-		
-		request.unbind(entity, model, "censoredWords");
-		
+		request.unbind(entity, model, "title", "description", "start", "end");
+		request.unbind(entity, model, "link", "publica", "finish", "workload");
 	}
 
 	@Override
-	public Personalization instantiate(final Request<Personalization> request) {
+	public Personalization findOne(final Request<Personalization> request) {
 		assert request != null;
-		Personalization result;
-		
-		result = new Personalization();
 
+		Personalization result;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneCensoredWords(id);
 		return result;
 	}
 
@@ -64,20 +68,15 @@ public class AdministratorPersonalizationCreateService implements AbstractCreate
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		if (!errors.hasErrors("censoredWords")) {
-            errors.state(request, !this.repository.findCensoredWords().contains(entity.getCensoredWords()), "censoredWords", "administrator.personalization.form.error.censoredWords");
-        }
 	}
 
 	@Override
-	public void create(final Request<Personalization> request, final Personalization entity) {
+	public void delete(final Request<acme.entities.personalization.Personalization> request, final Personalization entity) {
 		assert request != null;
 		assert entity != null;
-		
-		this.repository.save(entity);
-		
+
+		this.repository.delete(entity);
+
 	}
 	
-
 }

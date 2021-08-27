@@ -17,10 +17,22 @@ public class AdministratorPersonalizationController extends AbstractController<A
 	
 	@Autowired
     protected AdministratorPersonalizationCreateService createService;
-
+	
+	@Autowired
+	protected AdministratorBannedWordsListService listService;
+	
+	@Autowired
+	protected AdministratorPersonalizationDeleteService deleteService;
+	
+	@Autowired
+	protected AdministratorPersonalizationShowService showService;
+	
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 
 	}
 }

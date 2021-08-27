@@ -21,5 +21,9 @@
     <definition name="administrator/personalization/form" extends="master">
         <put-attribute name="body" type="template" value="../administrator/personalization/form.jsp" />
     </definition>
+    
+    <definition name="administrator/personalization/list" extends="master">
+        <put-attribute name="body" type="template" value="../administrator/personalization/list.jsp" />
+    </definition>
 
 </tiles-definitions>

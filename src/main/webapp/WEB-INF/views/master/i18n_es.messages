@@ -47,7 +47,7 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.personalization = Palabras censuradas
 master.menu.administrator.threshold  = Umbral de palabra
-
+master.menu.administrator.personalization.list=Lista de palabras censuradas
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor

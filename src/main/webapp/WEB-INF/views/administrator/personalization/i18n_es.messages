@@ -14,3 +14,7 @@ administrator.personalization.form.title.censored-words = Nueva palabra censurad
 administrator.personalization.form.button.create= Crear
 
 administrator.personalization.form.error.censoredWords= Esta palabra ya ha sido baneada.
+
+manag.task.button.delete=Eliminar
+
+administrator.personalization.list.label.bannedWord=Palabras baneadas

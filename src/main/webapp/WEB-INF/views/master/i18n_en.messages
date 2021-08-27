@@ -45,6 +45,7 @@ master.menu.administrator.shutdown = Shut down
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.personalization = Censored words
 master.menu.administrator.threshold  = Word threshold
+master.menu.administrator.personalization.list= List of censored words
 
 # master.menu.provider ########################################################
 

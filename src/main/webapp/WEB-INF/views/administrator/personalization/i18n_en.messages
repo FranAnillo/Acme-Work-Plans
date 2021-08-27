@@ -14,3 +14,7 @@ administrator.personalization.form.title.censored-words = New censored word
 administrator.personalization.form.button.create= Create
 
 administrator.personalization.form.error.censoredWords= This word is already banned
+
+manag.task.button.delete=Delete
+
+administrator.personalization.list.label.bannedWord=Banned words
