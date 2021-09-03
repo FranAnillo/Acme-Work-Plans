@@ -2,7 +2,6 @@
 package acme.features.anonymous.shout;
 
 import java.util.Date;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -95,49 +94,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 
 	}
 
-	public boolean filterString(final String s) {
-        final String j = s.replace("\s", ";");
-        final String[] palabras = j.split(";");
-        float numberBannedWords = 0;
-        float numberOfWords = 0;
-        final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
 
-        for (int x = 0; palabras.length > x; x++) {
-            if (!palabras[x].isEmpty()) {
-                numberOfWords++;
-            }
-        }
-
-        for (int i = 0; censoredWords.size() > i; i++) {
-            for (int k = 0; palabras.length > k; k++) {
-
-                final int numberOfCensoredString = censoredWords.get(i).replace(" ", ";").split(";").length;
-                String bannedString = palabras[i];
-
-                if (bannedString == null || bannedString.isEmpty())
-                    break;
-                for (int w = 1; numberOfCensoredString > w; w++) {
-
-                    while (i + w < palabras.length && (palabras[i + w].isEmpty() || palabras[i + w] == null)) {
-                        w++;
-                    }
-                    if (i + w >= palabras.length)
-                        break;
-                    bannedString = bannedString + ";" + palabras[i + w];
-                }
-                if (palabras[k].equalsIgnoreCase(bannedString)) {
-                    numberBannedWords = numberBannedWords + numberOfCensoredString;
-                }
-
-            }
-        }
-
-        if ((numberBannedWords * 100 / numberOfWords) >= this.thresholdRepository.findThresholdById()) {
-
-            return false;
-        }
-        return true;
-
-    }
 
 }
