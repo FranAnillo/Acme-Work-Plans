@@ -461,9 +461,9 @@
 		<property name="description" value= "the implementation of these policies is not an easy task"/>
 
 		<property name="start" value="2021/10/07 00:00"/>
-		<property name="end" value="2022/10/07 00:00"/>
+		<property name="end" value="2022/10/08 00:00"/>
 		<property name="publica" value="true"/>
-		<property name="workload" value="40.00"/>
+		<property name="workload" value="12.00"/>
 		<property name="link" value="https://www.microsoft.com"/>
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	 
@@ -472,10 +472,10 @@
 	<bean id="task02" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "This facilitates the task when you work with many files"/>
-		<property name="start" value="2021/10/08 01:00"/>
-		<property name="end" value="2022/10/08 02:00"/>
+		<property name="start" value="2021/10/08 10:00"/>
+		<property name="end" value="2022/10/08 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="workload" value="30.00"/>
+		<property name="workload" value="0.30"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag2Employer"/>
@@ -484,10 +484,10 @@
 	<bean id="task03" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "Each institution should have a specific task in the process"/>
-		<property name="start" value="2021/10/09 03:00"/>
-		<property name="end" value="2022/10/07 06:00"/>
+		<property name="start" value="2021/10/07 03:00"/>
+		<property name="end" value="2022/10/09 06:00"/>
 		<property name="publica" value="true"/>
-		<property name="workload" value="50.00"/>
+		<property name="workload" value="15.30"/>
 		<property name="link" value="https://www.as.com"/>
 
 		<property name="manag" ref="manag3Employer"/>
@@ -497,9 +497,9 @@
 		<property name="title" value= "Life"/>
 		<property name="description" value= "On the contrary, it is a task of everyday life."/>
 		<property name="start" value="2021/10/12 00:00"/>
-		<property name="end" value="2022/10/16 03:00"/>
+		<property name="end" value="2022/10/16 00:00"/>
 		<property name="publica" value="true"/>
-		<property name="workload" value="60.00"/>
+		<property name="workload" value="48.00"/>
 		<property name="link" value="https://www.google.com"/>
 
 		<property name="manag" ref="manag4Employer"/>
@@ -520,22 +520,22 @@
 	<bean id="task06" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Our first task is to understand what your business requires"/>
-		<property name="start" value="2021/10/17 02:00"/>
+		<property name="start" value="2021/10/17 09:00"/>
 		<property name="end" value="2022/10/27 09:00"/>
 		<property name="publica" value="true"/>
-		<property name="workload" value="40.00"/>
+		<property name="workload" value="99.59"/>
 		<property name="link" value=""/>
 
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task07" class="acme.entities.tasks.Task">
-		<property name="title" value= "Political"/>
-		<property name="description" value= "The task of preparing for earthquakes and tsunamis is challenging"/>
-		<property name="start" value="2021/10/25 03:00"/>
-		<property name="end" value="2022/10/28 09:00"/>
+		<property name="title" value= "Fontaneria"/>
+		<property name="description" value= "La tubería del baño está floja"/>
+		<property name="start" value="2021/10/25 09:00"/>
+		<property name="end" value="2022/10/25 10:00"/>
 		<property name="publica" value="true"/>
-		<property name="workload" value="40.00"/>
+		<property name="workload" value="0.15"/>
 
 		<property name="link" value="https://www.microsoft.com"/>
 
@@ -546,10 +546,10 @@
 		<property name="title" value= "Notification"/>
 		<property name="description" value= "When creating a task, you can send an SMS notification"/>
 		<property name="start" value="2021/11/06 00:00"/>
-		<property name="end" value="2022/11/13 05:00"/>
+		<property name="end" value="2022/11/14 00:00"/>
 		<property name="publica" value="true"/>
-		<property name="workload" value="25.00"/>
-		<property name="link" value="https://www.as.com"/>
+		<property name="workload" value="89.38"/>
+		<property name="link" value="https://stackoverflow.com/questions/2570410/how-to-send-sms-in-java"/>
 
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
