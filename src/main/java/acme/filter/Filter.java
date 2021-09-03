@@ -37,7 +37,7 @@ public class Filter {
 	
 	public static boolean filterString(final String s,final List<String> censoredWords, final int thresholdRepository) {
 		final String l =s.toLowerCase();
-        final String j = l.replace("\s", ";");
+        final String j = l.replace(" ", ";");
         final String[] palabras = j.split(";");
         float numberBannedWords = 0;
         float numberOfWords = 0;
