@@ -41,7 +41,6 @@ public class Filter {
         final String[] palabras = j.split(";");
         float numberBannedWords = 0;
         float numberOfWords = 0;
-        System.out.println(numberBannedWords);
 
         for (int x = 0; palabras.length > x; x++) {
             if (!palabras[x].isEmpty()) {
@@ -58,11 +57,10 @@ public class Filter {
                     break;
                 for (int w = 1; numberOfCensoredString > (w+i); w++) {
 
-                    System.out.println(numberBannedWords);
     	
                     while (k + w < palabras.length && palabras[k + w].isEmpty()) {
                         w++;
-                    }        System.out.println(numberBannedWords);
+                    }        
 
                     if (k + w >= palabras.length)
                         break;
@@ -77,7 +75,6 @@ public class Filter {
             }
         }
         
-        System.out.println(numberBannedWords);
         if ((numberBannedWords * 100 / numberOfWords) >= thresholdRepository) {
 
             return false;
