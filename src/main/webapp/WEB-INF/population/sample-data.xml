@@ -485,6 +485,7 @@
 		<property name="start" value="2021/09/09 03:00" />
 		<property name="end" value="2021/10/07 06:00" />
 		<property name="publica" value="true" />
+
 		<property name="workload" value="55.30" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
