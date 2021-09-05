@@ -1,4 +1,10 @@
-recordIndex,title,workload,description,start,end,link,publica,finish
-0,Notification,25.00,"When creating a task, you can send an SMS notification",2021/11/06 00:00,2022/11/13 05:00,"",true,false
-1,Work,30.00,"This facilitates the task when you work with many files",2021/08/08 01:00,2022/09/08 02:00,https://www.youtube.com/,true,false
-2,Life,35.00,"This task connects directly with the quality of our spiritual life",2021/11/18 02:00,2022/11/22 04:00,"",true,false
+recordIndex,title,workload,description,start,end
+0,Political,10.00,Member States have recognized the importance of that task,2021/10/13 05:00,2021/10/14 07:00
+1,Life,10.00,"Thus one can link two tasks, the spiritual and the physical",2021/10/15 02:00,2021/10/16 01:00
+2,Political,10.30,The free status relates to the tasks of local governments,2021/10/23 06:00,2021/10/24 10:00
+3,Work,16.15,"Each department has its own rules, daily tasks, milestones and goals",2021/11/05 09:00,2021/11/06 11:00
+4,Political,16.35,Dialogue is not only the task of experts and professionals,2021/10/03 01:00,2021/10/04 04:00
+5,Work,26.00,The free status relates to the tasks of local governments,2021/11/02 02:00,2021/11/03 04:00
+6,Political,28.00,Duties and tasks of the laboratories participating in the consortium,2021/11/13 03:00,2021/11/14 07:00
+7,Notification,35.20,"When creating a task, you can send an SMS notification",2021/11/06 00:00,2021/11/13 05:00
+8,Political,50.40,"Their appointment, roles and tasks should be clearly determined",2021/10/18 00:00,2021/10/21 04:00
