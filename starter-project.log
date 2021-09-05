@@ -1695,3 +1695,11 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting task46 = acme.ent
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task47 = acme.entities.tasks.Task{id=114, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task48 = acme.entities.tasks.Task{id=115, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+WARN [org.apache.catalina.util.SessionIdGeneratorBase] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [115] milliseconds.
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 404
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at acme.framework.utilities.RememberMeLogoutHandler.logout(RememberMeLogoutHandler.java:31): java.lang.AssertionError
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:200): Filter execution threw an exception
+java.lang.AssertionError
