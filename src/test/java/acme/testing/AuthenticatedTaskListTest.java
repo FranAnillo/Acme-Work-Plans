@@ -21,6 +21,7 @@ public class AuthenticatedTaskListTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 1, description);
 		super.checkColumnHasValue(recordIndex, 2, start);
 		super.checkColumnHasValue(recordIndex, 3, end);
+		super.checkColumnHasValue(recordIndex, 4, workload);
 		
 		super.clickOnListingRecord(recordIndex);
 		
