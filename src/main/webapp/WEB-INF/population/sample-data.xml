@@ -14,10 +14,6 @@
 
 	<import
 		resource="classpath:/WEB-INF/population/conversion-service.xml" />
-
-	<bean id="threshold" class="acme.entities.threshold.Threshold">
-		<property name="thresholdword" value="10" />
-	</bean>
 	
 	<bean id="banword01" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="sex" />

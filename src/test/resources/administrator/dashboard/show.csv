@@ -1,2 +1,2 @@
 numberOfPublicTask,numberOfPrivateTask,numberOfFinishTask,numberOfNotFinishTask,minimumWorkload,maximumWorkload,averageWorkload,deviationWorkload,averageExecutionPeriods
-24.00,24.00,24.00,24.00,20,100,74.90,27.70,"530,806.25"
+24,24,7,41,2.40,99.00,24.340626,25.39,"5,416.25"
