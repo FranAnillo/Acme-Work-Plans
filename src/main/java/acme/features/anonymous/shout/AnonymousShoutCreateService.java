@@ -74,7 +74,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert errors != null;
 		if (!errors.hasErrors("text")) {
-			errors.state(request, Filter.filterString(entity.getAuthor(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "text", "anonymous.shout.form.error.text");
+			errors.state(request, Filter.filterString(entity.getText(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "text", "anonymous.shout.form.error.text");
 		}
 		if (!errors.hasErrors("author")) {
 			errors.state(request, Filter.filterString(entity.getAuthor(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "author", "anonymous.shout.form.error.author");
