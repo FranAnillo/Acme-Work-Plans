@@ -8,7 +8,6 @@
 </h2> 
 
 <acme:form>
-if
     <acme:form-textbox code="administrator.personalization.form.label.censored-words" path="censoredWords"/>
     <acme:form-submit test="${command == 'create'}"  code="administrator.personalization.form.button.create" action="/administrator/spam/create" />
     	<acme:form-submit test="${command == 'show'}" code="manag.task.button.delete" action="/administrator/spam/delete"/>		
