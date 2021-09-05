@@ -23,7 +23,7 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 		
 		taskId= request.getModel().getInteger("id");
 		task = this.repository.findOneTaskById(taskId);
-		result =task!=null&&task.getPublica().equals(true)&&task.getFinish().equals(false);
+		result =task!=null&&task.getPublica().equals(true)&&!task.isFinished();
 		return result;
 	}
 

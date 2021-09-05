@@ -19,70 +19,70 @@
 		<property name="thresholdword" value="10" />
 	</bean>
 	
-	<bean id="banword01" class="acme.entities.personalization.Personalization">
+	<bean id="banword01" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="sex" />
 	</bean>
 	
-	<bean id="banword02" class="acme.entities.personalization.Personalization">
+	<bean id="banword02" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="sexo" />
 	</bean>
 	
-	<bean id="banword03" class="acme.entities.personalization.Personalization">
+	<bean id="banword03" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="hard core" />
 	</bean>
 	
-	<bean id="banword04" class="acme.entities.personalization.Personalization">
+	<bean id="banword04" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="pornografía" />
 	</bean>
 	
-	<bean id="banword05" class="acme.entities.personalization.Personalization">
+	<bean id="banword05" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="duro" />
 	</bean>
 	
-	<bean id="banword06" class="acme.entities.personalization.Personalization">
+	<bean id="banword06" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="viagra" />
 	</bean>
 	
-	<bean id="banword07" class="acme.entities.personalization.Personalization">
+	<bean id="banword07" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="cialis" />
 	</bean>
 	
-	<bean id="banword08" class="acme.entities.personalization.Personalization">
+	<bean id="banword08" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="tadalafil" />
 	</bean>
 	
-	<bean id="banword09" class="acme.entities.personalization.Personalization">
+	<bean id="banword09" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="nigeria" />
 	</bean>
 	
-	<bean id="banword10" class="acme.entities.personalization.Personalization">
+	<bean id="banword10" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="you’ve won" />
 	</bean>
 	
-	<bean id="banword11" class="acme.entities.personalization.Personalization">
+	<bean id="banword11" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="has ganado" />
 	</bean>
 	
-	<bean id="banword12" class="acme.entities.personalization.Personalization">
+	<bean id="banword12" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="million dollar" />
 	</bean>
 	
-	<bean id="banword13" class="acme.entities.personalization.Personalization">
+	<bean id="banword13" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="million euros" />
 	</bean>
 	
-	<bean id="banword14" class="acme.entities.personalization.Personalization">
+	<bean id="banword14" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="millón de dolares" />
 	</bean>
 	
-	<bean id="banword15" class="acme.entities.personalization.Personalization">
+	<bean id="banword15" class="acme.entities.spam.Spam">
 		<property name="censoredWords" value="millón de euros" />
 	</bean>
 
 	<!-- Shouts -->
 	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/02/13 08:30" />
+		<property name="moment" value="2020/02/13 09:30" />
 		<property name="author" value="Jhon Doe" />
 		<property name="text" value="I'm happy!" />
 		<property name="info">
@@ -91,7 +91,7 @@
 	</bean>
 
 	<bean id="shout02" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/08/09 07:55" />
+		<property name="moment" value="2020/09/09 07:55" />
 		<property name="author" value="Jane Doe" />
 		<property name="text" value="I'm the master of my room!" />
 		<property name="info" value="http://www.example.org" />
@@ -121,7 +121,7 @@
 	</bean>
 
 	<bean id="shout06" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/11/08 03:00" />
+		<property name="moment" value="2020/11/09 03:00" />
 		<property name="author" value="Paul Pogba" />
 		<property name="text"
 			value="Once you choose hope, anything’s possible" />
@@ -185,7 +185,7 @@
 	</bean>
 
 	<bean id="shout14" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/04/08 01:00" />
+		<property name="moment" value="2020/04/09 01:00" />
 		<property name="author" value="Gary Cahill" />
 		<property name="text"
 			value="The secret of your success is determined by your daily agenda" />
@@ -455,81 +455,90 @@
 	</bean>
 	
 	<!-- Tasks -->
-	
+
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "the implementation of these policies is not an easy task"/>
-		<property name="start" value="2021/08/07 00:00"/>
-		<property name="end" value="2022/09/07 00:00"/>
+
+		<property name="start" value="2021/10/07 00:00"/>
+		<property name="end" value="2022/10/08 00:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="12.00"/>
+		<property name="link" value="https://www.microsoft.com"/>
 		<property name="manag" ref="manag1Employer"/>
-	</bean>	
+	</bean>	 
+
 
 	<bean id="task02" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "This facilitates the task when you work with many files"/>
-		<property name="start" value="2021/08/08 01:00"/>
-		<property name="end" value="2022/09/08 02:00"/>
+		<property name="start" value="2021/10/08 10:00"/>
+		<property name="end" value="2022/10/08 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="30"/>
+		<property name="workload" value="0.30"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task03" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "Each institution should have a specific task in the process"/>
-		<property name="start" value="2021/09/09 03:00"/>
-		<property name="end" value="2022/10/07 06:00"/>
+		<property name="start" value="2021/10/07 03:00"/>
+		<property name="end" value="2022/10/09 06:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="50"/>
+		<property name="workload" value="15.30"/>
+		<property name="link" value="https://www.as.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task04" class="acme.entities.tasks.Task">
 		<property name="title" value= "Life"/>
 		<property name="description" value= "On the contrary, it is a task of everyday life."/>
-		<property name="start" value="2021/09/12 00:00"/>
-		<property name="end" value="2022/09/16 03:00"/>
+		<property name="start" value="2021/10/12 00:00"/>
+		<property name="end" value="2022/10/16 00:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="60"/>
+		<property name="workload" value="48.00"/>
+		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task05" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "Our task is to create the mechanism of a new order"/>
-		<property name="start" value="2021/09/18 00:00"/>
-		<property name="end" value="2022/09/22 06:00"/>
+		<property name="start" value="2021/10/18 00:00"/>
+		<property name="end" value="2022/10/22 06:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="40.00"/>
+		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task06" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Our first task is to understand what your business requires"/>
-		<property name="start" value="2021/10/17 02:00"/>
-		<property name="end" value="2022/10/27 08:00"/>
+		<property name="start" value="2021/10/17 09:00"/>
+		<property name="end" value="2022/10/27 09:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="99.59"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task07" class="acme.entities.tasks.Task">
-		<property name="title" value= "Political"/>
-		<property name="description" value= "The task of preparing for earthquakes and tsunamis is challenging"/>
-		<property name="start" value="2021/10/25 03:00"/>
-		<property name="end" value="2022/10/28 09:00"/>
+		<property name="title" value= "Fontaneria"/>
+		<property name="description" value= "La tubería del baño está floja"/>
+		<property name="start" value="2021/10/25 09:00"/>
+		<property name="end" value="2022/10/25 10:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="0.15"/>
+
+		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -537,10 +546,11 @@
 		<property name="title" value= "Notification"/>
 		<property name="description" value= "When creating a task, you can send an SMS notification"/>
 		<property name="start" value="2021/11/06 00:00"/>
-		<property name="end" value="2022/11/13 05:00"/>
+		<property name="end" value="2022/11/14 00:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="25"/>
+		<property name="workload" value="89.38"/>
+		<property name="link" value="https://stackoverflow.com/questions/2570410/how-to-send-sms-in-java"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -550,8 +560,9 @@
 		<property name="start" value="2021/11/18 02:00"/>
 		<property name="end" value="2022/11/22 04:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="35"/>
+		<property name="workload" value="35.00"/>
+		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -561,8 +572,9 @@
 		<property name="start" value="2021/11/25 01:00"/>
 		<property name="end" value="2022/11/28 06:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="40"/>
+		<property name="workload" value="40.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -572,8 +584,9 @@
 		<property name="start" value="2021/10/03 01:00"/>
 		<property name="end" value="2022/10/04 04:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="45"/>
+		<property name="workload" value="45.00"/>
+		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -583,184 +596,207 @@
 		<property name="start" value="2021/10/13 05:00"/>
 		<property name="end" value="2022/10/14 07:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="55"/>
+		<property name="workload" value="55.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task13" class="acme.entities.tasks.Task">
 		<property name="title" value= "Life"/>
 		<property name="description" value= "Thus one can link two tasks, the spiritual and the physical"/>
-		<property name="start" value="2021/10/15 02:00"/>
-		<property name="end" value="2022/10/16 01:00"/>
+		<property name="start" value="2021/01/15 02:00"/>
+		<property name="end" value="2021/08/16 01:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task14" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "Their appointment, roles and tasks should be clearly determined"/>
-		<property name="start" value="2021/10/18 00:00"/>
-		<property name="end" value="2022/10/21 04:00"/>
+		<property name="start" value="2021/01/18 00:00"/>
+		<property name="end" value="2021/08/21 04:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value="https://www.as.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task15" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "The free status relates to the tasks of local governments"/>
-		<property name="start" value="2021/10/23 06:00"/>
-		<property name="end" value="2022/10/24 10:00"/>
+		<property name="start" value="2021/02/23 06:00"/>
+		<property name="end" value="2021/08/24 10:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task16" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "The free status relates to the tasks of local governments"/>
-		<property name="start" value="2021/11/02 02:00"/>
-		<property name="end" value="2022/11/03 04:00"/>
+		<property name="start" value="2021/01/02 02:00"/>
+		<property name="end" value="2021/07/03 04:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+
+		<property name="link" value="https://www.microsoft.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task17" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Each department has its own rules, daily tasks, milestones and goals"/>
-		<property name="start" value="2021/11/05 09:00"/>
-		<property name="end" value="2022/11/06 11:00"/>
+		<property name="start" value="2021/01/05 09:00"/>
+		<property name="end" value="2021/08/06 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task18" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "Duties and tasks of the laboratories participating in the consortium"/>
-		<property name="start" value="2021/11/13 03:00"/>
-		<property name="end" value="2022/11/14 07:00"/>
+		<property name="start" value="2021/01/13 03:00"/>
+		<property name="end" value="2021/08/14 07:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task19" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "These tasks had been temporarily assigned to military observers"/>
-		<property name="start" value="2021/08/14 06:00"/>
-		<property name="end" value="2022/08/16 11:00"/>
+		<property name="start" value="2021/01/14 06:00"/>
+		<property name="end" value="2021/08/16 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task20" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "The fundamental importance of the democratic slogans and tasks"/>
-		<property name="start" value="2021/08/17 00:00"/>
-		<property name="end" value="2022/08/19 00:00"/>
+		<property name="start" value="2021/01/17 00:00"/>
+		<property name="end" value="2021/08/19 00:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task21" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "One of the main tasks of the Board is protection"/>
-		<property name="start" value="2021/08/20 02:00"/>
-		<property name="end" value="2022/08/21 07:00"/>
+		<property name="start" value="2021/01/20 02:00"/>
+		<property name="end" value="2021/08/21 07:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task22" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Each member of the team should have clear responsibilities"/>
-		<property name="start" value="2021/08/22 05:00"/>
-		<property name="end" value="2022/08/23 11:00"/>
+		<property name="start" value="2021/02/22 05:00"/>
+		<property name="end" value="2021/08/08 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task23" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "At present, our development tasks have become more pressing"/>
-		<property name="start" value="2021/08/24 00:00"/>
-		<property name="end" value="2022/08/25 10:00"/>
+
+		<property name="start" value="2021/01/24 00:00"/>
+		<property name="end" value="2021/08/22 10:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
 	<bean id="task24" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "Overcoming poverty is one of its priority tasks"/>
-		<property name="start" value="2021/08/26 05:00"/>
-		<property name="end" value="2022/08/27 11:00"/>
+
+		<property name="start" value="2021/01/26 05:00"/>
+		<property name="end" value="2021/08/23 11:00"/>
 		<property name="publica" value="true"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="99.00"/>
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task25" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "The Commission shall be responsible for carrying out the following tasks"/>
-		<property name="start" value="2021/09/11 02:00"/>
+		<property name="start" value="2021/11/11 02:00"/>
 		<property name="end" value="2022/09/12 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="45"/>
+		<property name="workload" value="10.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
 	<bean id="task26" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Review the list of tasks you made for the week"/>
-		<property name="start" value="2021/09/14 10:00"/>
+		<property name="start" value="2021/11/14 10:00"/>
 		<property name="end" value="2022/09/15 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="35"/>
+		<property name="workload" value="35.00"/>
+
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
 	<bean id="task27" class="acme.entities.tasks.Task">
 		<property name="title" value= "Political"/>
 		<property name="description" value= "The next presidency will face a number of difficult tasks"/>
-		<property name="start" value="2021/09/17 10:00"/>
+		<property name="start" value="2021/10/17 10:00"/>
 		<property name="end" value="2022/09/18 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="55"/>
+		<property name="workload" value="55.00"/>
+
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task28" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
-		<property name="description" value= "This allows them to carry out all sorts of important tasks"/>
-		<property name="start" value="2021/09/22 08:00"/>
+		<property name="description" value= "This allows them to carry out all sorts of important tasks"/>		<property name="start" value="2021/10/22 08:00"/>
+
 		<property name="end" value="2022/09/23 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="50"/>
+		<property name="workload" value="55.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -770,19 +806,21 @@
 		<property name="start" value="2021/09/24 05:00"/>
 		<property name="end" value="2022/09/25 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="60"/>
+		<property name="workload" value="60.00"/>
+    <property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
 	<bean id="task30" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "This will definitely speed up your daily and repetitive tasks"/>
-		<property name="start" value="2021/09/25 08:00"/>
+		<property name="start" value="2021/09/25 09:00"/>
 		<property name="end" value="2022/09/26 11:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="75"/>
+		<property name="workload" value="75.00"/>
+		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -790,10 +828,11 @@
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Different products require a different combination of tasks"/>
 		<property name="start" value="2021/09/27 06:00"/>
-		<property name="end" value="2022/09/28 08:00"/>
+		<property name="end" value="2022/09/28 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="70"/>
+		<property name="workload" value="60.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -803,8 +842,9 @@
 		<property name="start" value="2021/09/29 09:00"/>
 		<property name="end" value="2022/09/30 11:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="80"/>
+		<property name="workload" value="80.00"/>
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -814,8 +854,9 @@
 		<property name="start" value="2021/12/01 07:00"/>
 		<property name="end" value="2022/12/02 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="65"/>
+		<property name="workload" value="65.00"/>
+		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -825,8 +866,9 @@
 		<property name="start" value="2021/12/03 07:00"/>
 		<property name="end" value="2022/12/04 11:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="20"/>
+		<property name="workload" value="20.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -836,8 +878,9 @@
 		<property name="start" value="2021/12/05 10:00"/>
 		<property name="end" value="2022/12/06 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="55"/>
+		<property name="workload" value="55.00"/>
+		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -845,10 +888,11 @@
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Estimate what is going to cost to train the tasks"/>
 		<property name="start" value="2021/12/07 05:00"/>
-		<property name="end" value="2022/12/08 09:00"/>
+		<property name="end" value="2022/12/09 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="false"/>
-		<property name="workload" value="85"/>
+		<property name="workload" value="85.00"/>
+		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -858,8 +902,9 @@
 		<property name="start" value="2021/12/09 07:00"/>
 		<property name="end" value="2022/12/10 10:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="96.00"/>
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -869,8 +914,9 @@
 		<property name="start" value="2021/12/11 10:00"/>
 		<property name="end" value="2022/12/12 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="93.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -880,8 +926,9 @@
 		<property name="start" value="2021/12/13 06:00"/>
 		<property name="end" value="2022/12/14 10:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="87.00"/>
+    <property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -891,8 +938,9 @@
 		<property name="start" value="2021/12/15 00:00"/>
 		<property name="end" value="2022/12/16 03:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="77.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -902,8 +950,9 @@
 		<property name="start" value="2021/12/17 03:00"/>
 		<property name="end" value="2022/12/18 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="88.00"/>
+		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -913,8 +962,9 @@
 		<property name="start" value="2021/12/19 06:00"/>
 		<property name="end" value="2022/12/20 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="54.00"/>
+		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
@@ -924,8 +974,9 @@
 		<property name="start" value="2021/12/21 00:00"/>
 		<property name="end" value="2022/12/22 04:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="23.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag3Employer"/>
 	</bean>	
 
@@ -935,8 +986,9 @@
 		<property name="start" value="2021/12/23 02:00"/>
 		<property name="end" value="2022/12/24 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="24.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag4Employer"/>
 	</bean>	
 
@@ -944,10 +996,11 @@
 		<property name="title" value= "Political"/>
 		<property name="description" value= "Body or bodies carrying out control and audit tasks"/>
 		<property name="start" value="2021/12/25 05:00"/>
-		<property name="end" value="2022/12/26 08:00"/>
+		<property name="end" value="2022/12/26 09:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="37.00"/>
+		<property name="link" value="https://www.google.com"/>
+
 		<property name="manag" ref="manag5Employer"/>
 	</bean>	
 
@@ -957,8 +1010,9 @@
 		<property name="start" value="2021/12/27 07:00"/>
 		<property name="end" value="2022/12/28 10:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="94.00"/>
+		<property name="link" value="https://www.youtube.com"/>
+
 		<property name="manag" ref="manag1Employer"/>
 	</bean>	
 
@@ -968,19 +1022,21 @@
 		<property name="start" value="2021/12/29 05:00"/>
 		<property name="end" value="2022/12/30 07:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="13.00"/>
+		<property name="link" value=""/>
+
 		<property name="manag" ref="manag2Employer"/>
 	</bean>	
 
 	<bean id="task48" class="acme.entities.tasks.Task">
 		<property name="title" value= "Work"/>
 		<property name="description" value= "Some of these new tasks require additional resources"/>
-		<property name="start" value="2021/08/29 09:00"/>
+		<property name="start" value="2021/10/29 09:00"/>
 		<property name="end" value="2022/08/30 12:00"/>
 		<property name="publica" value="false"/>
-		<property name="finish" value="true"/>
-		<property name="workload" value="100"/>
+		<property name="workload" value="18.00"/>
+		<property name="link" value="https://www.google.com"/>
 		<property name="manag" ref="manag3Employer"/>
-	</bean>	
+	</bean>	 
+
 </beans>

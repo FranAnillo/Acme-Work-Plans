@@ -48,7 +48,7 @@ public class ManagTaskListService implements AbstractListService<Manag, Task> {
 			}
 		}
 		
-		return result.stream().sorted(Comparator.comparingDouble(Task::getWorkload)).collect(Collectors.toList());
+		return result.stream().sorted(Comparator.comparingInt(Task::getTime)).collect(Collectors.toList());
 	}
 
 

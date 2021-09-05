@@ -1,13 +1,11 @@
 package acme.features.manags.task;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manag;
 import acme.entities.tasks.Task;
-import acme.features.administrator.personalization.AdministratorPersonalizationRepository;
+import acme.features.administrator.personalization.AdministratorSpamRepository;
 import acme.features.administrator.threshold.AdministratorThresholdRepository;
 import acme.filter.Filter;
 import acme.framework.components.Errors;
@@ -23,11 +21,11 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 	@Autowired
 	protected ManagTaskRepository						repository;
 
-	@Autowired
-	protected AdministratorThresholdRepository			thresholdRepository;
+		@Autowired
+		protected AdministratorThresholdRepository			thresholdRepository;
 
 	@Autowired
-	protected AdministratorPersonalizationRepository	personalizationRepository;
+	protected AdministratorSpamRepository	personalizationRepository;
 
 
 	@Override
@@ -52,7 +50,7 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "description", "link", "publica");
+		request.unbind(entity, model, "title", "description","start","end", "link","workload", "publica");
 	}
 
 	@Override
@@ -64,11 +62,7 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		manag = this.repository.findOneManagbyUserAccountById(request.getPrincipal().getActiveRoleId());
 
 		result = new Task();
-		result.setTitle("Task 1");
-		result.setDescription("Description of the taks 2");
-		result.setLink("http://example.org");
 		result.setPublica(false);
-		result.setFinish(false);
 		result.setManag(manag);
 
 		return result;
@@ -79,22 +73,27 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
 		if (!errors.hasErrors("end")) {
 			errors.state(request, entity.getEnd().after(entity.getStart()), "end", "manag.task.error.end");
 		}
-
-		if (!errors.hasErrors("workload")&&!errors.hasErrors("start")&&!errors.hasErrors("end")) {
-			errors.state(request, entity.getWorkload() < Filter.calculate(entity.getStart(), entity.getEnd()), "workload", "manag.task.error.workload");
+		
+		if((!errors.hasErrors("workload"))) {
+			errors.state(request, entity.getWorkload().getMinutes()<=59, "workload", "default.error.workload");
+		}
+		
+		if (!errors.hasErrors("start")&&!errors.hasErrors("end")&&!errors.hasErrors("workload")) {
+			errors.state(request, Filter.calculate(entity.getStart(), entity.getEnd(), entity.getWorkload()), "workload", "acme.validation.decimal-max",Filter.calculate(entity.getStart(),  entity.getEnd()));
 		}
 
 		if (!errors.hasErrors("description")) {
-			errors.state(request, this.filterString(entity.getDescription()), "description", "manag.task.form.error.description");
+			errors.state(request, Filter.filterString(entity.getDescription(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "description", "manag.task.form.error.description");
 		}
 
 		if (!errors.hasErrors("title")) {
-			errors.state(request, this.filterString(entity.getTitle()), "title", "manag.task.form.error.title");
+			errors.state(request, Filter.filterString(entity.getTitle(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "title", "manag.task.form.error.title");
 		}
+	
+
 	}
 
 	@Override
@@ -102,26 +101,11 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		assert request != null;
 		assert entity != null;
 
-		entity.setFinish(false);
+		entity.setPublica(false);
 		this.repository.save(entity);
 	}
-	public boolean filterString(final String s) {
-		final String j = s.replace(" ", ";");
-		final int number = j.split(";").length;
-		final String[] palabras = j.split(";");
-		float numberBannedWords = 0;
-		final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
-		for (int i = 0; censoredWords.size() > i; i++) {
-			for (int k = 0; palabras.length > k; k++) {
-				if (palabras[k].equalsIgnoreCase(censoredWords.get(i))) {
-					numberBannedWords = numberBannedWords + 1;
-				}
-			}
-		}
-		if ((numberBannedWords * 100 / number) >= this.thresholdRepository.findThresholdById())
-			return false;
-
-		return true;
-	}
-
+	
 }
+
+	
+

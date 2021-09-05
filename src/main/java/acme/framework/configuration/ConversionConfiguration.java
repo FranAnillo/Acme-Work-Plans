@@ -32,7 +32,7 @@ public class ConversionConfiguration implements WebMvcConfigurer {
 		LocalisedDateFormatter dateFormatter;
 		LocalisedMoneyFormatter moneyFormatter;
 		LocalisedDoubleFormatter doubleFormatter;
-
+		
 		registry.removeConvertible(String.class, Date.class);
 		registry.removeConvertible(Date.class, String.class);
 		dateFormatter = new LocalisedDateFormatter();
@@ -45,6 +45,8 @@ public class ConversionConfiguration implements WebMvcConfigurer {
 
 		moneyFormatter = new LocalisedMoneyFormatter();
 		registry.addFormatter(moneyFormatter);
+		
+		
 	}
 
 }

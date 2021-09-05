@@ -2,14 +2,14 @@
 package acme.features.anonymous.shout;
 
 import java.util.Date;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.shouts.Shout;
-import acme.features.administrator.personalization.AdministratorPersonalizationRepository;
+import acme.features.administrator.personalization.AdministratorSpamRepository;
 import acme.features.administrator.threshold.AdministratorThresholdRepository;
+import acme.filter.Filter;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -25,7 +25,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	protected AnonymousShoutRepository					repository;
 
 	@Autowired
-	protected AdministratorPersonalizationRepository	personalizationRepository;
+	protected AdministratorSpamRepository	personalizationRepository;
 
 	@Autowired
 	protected AdministratorThresholdRepository			thresholdRepository;
@@ -74,10 +74,10 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert errors != null;
 		if (!errors.hasErrors("text")) {
-			errors.state(request, this.filterString(entity.getText()), "text", "anonymous.shout.form.error.text");
+			errors.state(request, Filter.filterString(entity.getAuthor(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "text", "anonymous.shout.form.error.text");
 		}
 		if (!errors.hasErrors("author")) {
-			errors.state(request, this.filterString(entity.getAuthor()), "author", "anonymous.shout.form.error.author");
+			errors.state(request, Filter.filterString(entity.getAuthor(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "author", "anonymous.shout.form.error.author");
 		}
 	}
 
@@ -94,23 +94,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 
 	}
 
-	public boolean filterString(final String s) {
-		final String j = s.replace(" ", ";");
-		final int number = j.split(";").length;
-		final String[] palabras = j.split(";");
-		float numberBannedWords = 0;
-		final List<String> censoredWords = this.personalizationRepository.findCensoredWords();
-		for (int i = 0; censoredWords.size() > i; i++) {
-			for (int k = 0; palabras.length > k; k++) {
-				if (palabras[k].equalsIgnoreCase(censoredWords.get(i))) {
-					numberBannedWords = numberBannedWords + 1;
-				}
-			}
-		}
-		if ((numberBannedWords * 100 / number) >= this.thresholdRepository.findThresholdById())
-			return false;
 
-		return true;
-	}
 
 }

@@ -12,3 +12,9 @@ administrator.personalization.form.label.censored-words = Añadir
 administrator.personalization.form.title.censored-words = Nueva palabra censurada
 
 administrator.personalization.form.button.create= Crear
+
+administrator.personalization.form.error.censoredWords= Esta palabra ya ha sido baneada.
+
+manag.task.button.delete=Eliminar
+
+administrator.personalization.list.label.bannedWord=Palabras baneadas

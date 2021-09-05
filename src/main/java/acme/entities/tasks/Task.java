@@ -7,14 +7,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.datatypes.Workload;
 import acme.entities.roles.Manag;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -39,12 +38,12 @@ public class Task extends DomainEntity {
 	@Length(max=500)
 	protected String description;
 	
-	@Future
+
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date start;
 	
-	@Future
+
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date end;
@@ -52,17 +51,34 @@ public class Task extends DomainEntity {
 	@URL
 	protected String link;
 	
-	@NotNull
+	
 	protected Boolean publica;
 	
+	@Valid
 	@NotNull
-	protected Boolean finish;
+	protected Workload workload;
 	
-	@Positive
-	@NotNull
-	protected Double workload;
+	// Derived attributes -----------------------------------------------------
 
+	public Integer getTime(){
+		return this.workload.getTime();
+	}
+	
+	public boolean isPublishable() {
+		boolean result;
+		Date now;
 
+		now = new Date();
+		result = !this.publica && now.before(this.start);
+
+		return result;
+	}
+	public boolean isFinished() {
+		Date now;
+
+		now = new Date();
+		return this.end.before(now);
+	}
 		// Relationships ----------------------------------------------------------
 	
 		@NotNull

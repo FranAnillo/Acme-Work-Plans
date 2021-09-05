@@ -36,4 +36,13 @@
 	<acme:form-double
 		code="administrator.dashboard.form.label.average-execution-periods"
 		path="averageExecutionPeriods" />
+	<acme:form-double
+		code="administrator.dashboard.form.label.deviation-execution-periods"
+		path="deviationExecutionPeriods" />
+<acme:form-double
+		code="administrator.dashboard.form.label.minimum-execution-periods"
+		path="minimumExecutionPeriods" />
+<acme:form-double
+		code="administrator.dashboard.form.label.maximum-execution-periods"
+		path="maximumExecutionPeriods" />		
 </acme:form>

@@ -17,6 +17,9 @@ default.placeholder.money = EUR 123,456.78
 default.placeholder.double = 123,456.78
 default.placeholder.integer = 123,456
 default.placeholder.url = http://www.acme.com
+default.placeholder.workload = hh.mm
+
+default.error.workload = The minutes must be greater or equal to 59
 
 default.error.conversion = Invalid value
 default.error.endpoint-unavailable = End-point not available

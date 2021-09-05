@@ -16,10 +16,12 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manag;
 import acme.entities.tasks.Task;
+import acme.features.administrator.personalization.AdministratorSpamRepository;
+import acme.features.administrator.threshold.AdministratorThresholdRepository;
+import acme.filter.Filter;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
@@ -30,13 +32,26 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 	@Autowired
 	protected ManagTaskRepository repository;
 	
+	@Autowired
+	protected AdministratorThresholdRepository			thresholdRepository;
+
+	@Autowired
+	protected AdministratorSpamRepository	personalizationRepository;
+
 	// AbstractUpdateService<Authenticated, Provider> interface ---------------
 	
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
-		
-		return true;
+		boolean result;
+		int taskId;
+		Task task;
+
+		taskId = request.getModel().getInteger("id");
+		task = this.repository.findOneTaskById(taskId);
+		result = task != null && task.getManag().getId() == request.getPrincipal().getActiveRoleId();
+
+		return result;
 	}
 
 	@Override
@@ -54,7 +69,8 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "start","description", "end", "workload");
+		request.unbind(entity, model, "title","description", "start", "end", "workload","link", "publica");
+		model.setAttribute("taskd", entity.getId());
 	}
 
 	@Override
@@ -62,13 +78,12 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 		assert request != null;
 		
 		Task result;
-		Principal principal;
-		int userAccountId;
 		
-		principal = request.getPrincipal();
-		userAccountId = principal.getAccountId();
+		int id;
 		
-		result = this.repository.findOneTaskById(userAccountId);
+		id = request.getModel().getInteger("id");
+		
+		result = this.repository.findOneTaskById(id);
 		
 		return result;
 	}
@@ -78,6 +93,26 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		if (!errors.hasErrors("end")) {
+			errors.state(request, entity.getEnd().after(entity.getStart()), "end", "manag.task.error.end");
+		}
+		
+		if((!errors.hasErrors("workload"))) {
+			errors.state(request, entity.getWorkload().getMinutes()<=59, "workload", "default.error.workload");
+		}
+		
+		if (!errors.hasErrors("start")&&!errors.hasErrors("end")&&!errors.hasErrors("workload")) {
+			errors.state(request, Filter.calculate(entity.getStart(), entity.getEnd(), entity.getWorkload()), "workload", "acme.validation.decimal-max",Filter.calculate(entity.getStart(),  entity.getEnd()));
+		}
+
+		if (!errors.hasErrors("description")) {
+			errors.state(request, Filter.filterString(entity.getDescription(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "description", "manag.task.form.error.description");
+		}
+
+		if (!errors.hasErrors("title")) {
+			errors.state(request, Filter.filterString(entity.getTitle(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "title", "manag.task.form.error.title");
+		}
 	}
 
 	@Override
@@ -87,5 +122,6 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 
 		this.repository.save(entity);
 	}
+
 
 }

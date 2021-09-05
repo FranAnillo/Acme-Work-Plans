@@ -18,14 +18,16 @@ manag.task.error.end=La fecha final es anterior a la de comienzo
 
 manag.task.label.title = Titulo
 manag.task.label.description = Descripcion
-manag.task.label.start = Comienzo
-manag.task.label.end = Finalizacion
+manag.task.start = Fecha de inicio
+manag.task.end = Fecha de fin
 manag.task.label.workload = Carga de trabajo
 
 manag.task.label.publica=Publica
 manag.task.button.return= Volver
 manag.task.form.button.create = Crear
 manag.task.button.delete=Borrar
+manag.task.button.update=Actualizar
+manag.task.button.publish=Publicar
 
 manag.task.form.error.title= El título contiene demasiadas palabras de spam
 manag.task.form.error.description= La descripción contiene demasiadas palabras de spam
