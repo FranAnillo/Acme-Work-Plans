@@ -463,7 +463,6 @@
 		<property name="start" value="2021/08/07 00:00" />
 		<property name="end" value="2021/10/07 00:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="99.00" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -475,7 +474,6 @@
 		<property name="start" value="2021/09/08 01:00" />
 		<property name="end" value="2021/09/15 02:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="60.35" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -487,7 +485,7 @@
 		<property name="start" value="2021/09/09 03:00" />
 		<property name="end" value="2021/10/07 06:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
+
 		<property name="workload" value="55.30" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
@@ -499,7 +497,6 @@
 		<property name="start" value="2021/09/12 00:00" />
 		<property name="end" value="2021/09/17 03:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="60.25" />
 		<property name="manag" ref="manag4Employer" />
 	</bean>
@@ -511,7 +508,6 @@
 		<property name="start" value="2021/09/18 00:00" />
 		<property name="end" value="2021/09/22 06:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="73.40" />
 		<property name="manag" ref="manag5Employer" />
 	</bean>
@@ -523,7 +519,6 @@
 		<property name="start" value="2021/10/17 02:00" />
 		<property name="end" value="2021/10/27 08:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="98.10" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -535,7 +530,6 @@
 		<property name="start" value="2021/10/25 03:00" />
 		<property name="end" value="2021/10/28 09:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="66.50" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -547,7 +541,6 @@
 		<property name="start" value="2021/11/06 00:00" />
 		<property name="end" value="2021/11/13 05:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="35.20" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
@@ -559,7 +552,6 @@
 		<property name="start" value="2021/11/18 02:00" />
 		<property name="end" value="2021/11/22 04:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="76.00" />
 		<property name="manag" ref="manag4Employer" />
 	</bean>
@@ -571,7 +563,6 @@
 		<property name="start" value="2021/11/25 01:00" />
 		<property name="end" value="2021/11/28 06:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="60.50" />
 		<property name="manag" ref="manag5Employer" />
 	</bean>
@@ -583,7 +574,6 @@
 		<property name="start" value="2021/10/03 01:00" />
 		<property name="end" value="2021/10/04 04:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="16.35" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -595,7 +585,6 @@
 		<property name="start" value="2021/10/13 05:00" />
 		<property name="end" value="2021/10/14 07:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="false" />
 		<property name="workload" value="10.00" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -607,7 +596,6 @@
 		<property name="start" value="2021/10/15 02:00" />
 		<property name="end" value="2021/10/16 01:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="10.00" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
@@ -619,7 +607,6 @@
 		<property name="start" value="2021/10/18 00:00" />
 		<property name="end" value="2021/10/21 04:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="50.40" />
 		<property name="manag" ref="manag4Employer" />
 	</bean>
@@ -631,7 +618,6 @@
 		<property name="start" value="2021/10/23 06:00" />
 		<property name="end" value="2021/10/24 10:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="10.30" />
 		<property name="manag" ref="manag5Employer" />
 	</bean>
@@ -643,7 +629,6 @@
 		<property name="start" value="2021/11/02 02:00" />
 		<property name="end" value="2021/11/03 04:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="26.00" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -655,7 +640,6 @@
 		<property name="start" value="2021/11/05 09:00" />
 		<property name="end" value="2021/11/06 11:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="16.15" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -667,7 +651,6 @@
 		<property name="start" value="2021/11/13 03:00" />
 		<property name="end" value="2021/11/14 07:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="28.00" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
@@ -679,7 +662,6 @@
 		<property name="start" value="2021/08/14 06:00" />
 		<property name="end" value="2021/08/16 11:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="34.00" />
 		<property name="manag" ref="manag4Employer" />
 	</bean>
@@ -691,7 +673,6 @@
 		<property name="start" value="2021/08/17 00:00" />
 		<property name="end" value="2021/08/19 00:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="16.00" />
 		<property name="manag" ref="manag5Employer" />
 	</bean>
@@ -703,7 +684,6 @@
 		<property name="start" value="2021/08/20 02:00" />
 		<property name="end" value="2021/08/21 07:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="10.25" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -715,7 +695,6 @@
 		<property name="start" value="2021/08/22 05:00" />
 		<property name="end" value="2021/08/23 11:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="08.20" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -727,7 +706,6 @@
 		<property name="start" value="2021/08/24 00:00" />
 		<property name="end" value="2021/08/25 10:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="12.00" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
@@ -739,7 +717,6 @@
 		<property name="start" value="2021/08/26 05:00" />
 		<property name="end" value="2021/08/27 11:00" />
 		<property name="publica" value="true" />
-		<property name="finish" value="true" />
 		<property name="workload" value="13.00" />
 		<property name="manag" ref="manag4Employer" />
 	</bean>
@@ -751,7 +728,6 @@
 		<property name="start" value="2021/09/11 02:00" />
 		<property name="end" value="2021/09/12 07:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="05.00" />
 		<property name="manag" ref="manag5Employer" />
 	</bean>
@@ -763,7 +739,6 @@
 		<property name="start" value="2021/09/14 10:00" />
 		<property name="end" value="2021/09/15 12:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="07.00" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -775,7 +750,6 @@
 		<property name="start" value="2021/09/17 10:00" />
 		<property name="end" value="2021/09/18 07:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="09.00" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -787,7 +761,6 @@
 		<property name="start" value="2021/09/22 08:00" />
 		<property name="end" value="2021/09/23 12:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="08.00" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
@@ -799,7 +772,6 @@
 		<property name="start" value="2021/09/24 05:00" />
 		<property name="end" value="2021/09/25 07:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="05.00" />
 		<property name="manag" ref="manag4Employer" />
 	</bean>
@@ -811,7 +783,6 @@
 		<property name="start" value="2021/09/25 08:00" />
 		<property name="end" value="2021/09/26 11:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="13.00" />
 		<property name="manag" ref="manag5Employer" />
 	</bean>
@@ -823,7 +794,6 @@
 		<property name="start" value="2021/09/27 06:00" />
 		<property name="end" value="2021/09/28 08:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="12.30" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -835,7 +805,6 @@
 		<property name="start" value="2021/09/29 09:00" />
 		<property name="end" value="2021/09/30 11:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="14.15" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -847,7 +816,6 @@
 		<property name="start" value="2021/12/01 07:00" />
 		<property name="end" value="2021/12/02 09:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="12.00" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
@@ -859,7 +827,6 @@
 		<property name="start" value="2021/12/03 07:00" />
 		<property name="end" value="2021/12/04 11:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="20.00" />
 		<property name="manag" ref="manag4Employer" />
 	</bean>
@@ -871,7 +838,6 @@
 		<property name="start" value="2021/12/05 10:00" />
 		<property name="end" value="2021/12/06 12:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="13.00" />
 		<property name="manag" ref="manag5Employer" />
 	</bean>
@@ -883,7 +849,6 @@
 		<property name="start" value="2021/12/07 05:00" />
 		<property name="end" value="2021/12/08 09:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="false" />
 		<property name="workload" value="15.00" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -895,7 +860,6 @@
 		<property name="start" value="2021/12/09 07:00" />
 		<property name="end" value="2021/12/10 10:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="10.00" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -907,7 +871,6 @@
 		<property name="start" value="2021/12/11 10:00" />
 		<property name="end" value="2021/12/12 12:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="08.50" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
@@ -919,7 +882,6 @@
 		<property name="start" value="2021/12/13 06:00" />
 		<property name="end" value="2021/12/14 10:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="06.00" />
 		<property name="manag" ref="manag4Employer" />
 	</bean>
@@ -931,7 +893,6 @@
 		<property name="start" value="2021/12/15 00:00" />
 		<property name="end" value="2021/12/16 03:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="02.40" />
 		<property name="manag" ref="manag5Employer" />
 	</bean>
@@ -943,7 +904,6 @@
 		<property name="start" value="2021/12/17 03:00" />
 		<property name="end" value="2021/12/18 07:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="05.00" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -955,7 +915,6 @@
 		<property name="start" value="2021/12/19 06:00" />
 		<property name="end" value="2021/12/20 09:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="06.00" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -967,7 +926,6 @@
 		<property name="start" value="2021/12/21 00:00" />
 		<property name="end" value="2021/12/22 04:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="06.00" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
@@ -979,7 +937,6 @@
 		<property name="start" value="2021/12/23 02:00" />
 		<property name="end" value="2021/12/24 07:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="09.00" />
 		<property name="manag" ref="manag4Employer" />
 	</bean>
@@ -991,7 +948,6 @@
 		<property name="start" value="2021/12/25 05:00" />
 		<property name="end" value="2021/12/26 08:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="12.40" />
 		<property name="manag" ref="manag5Employer" />
 	</bean>
@@ -1003,7 +959,6 @@
 		<property name="start" value="2021/12/27 07:00" />
 		<property name="end" value="2021/12/28 10:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="13.15" />
 		<property name="manag" ref="manag1Employer" />
 	</bean>
@@ -1015,7 +970,6 @@
 		<property name="start" value="2021/12/29 05:00" />
 		<property name="end" value="2021/12/30 07:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="05.00" />
 		<property name="manag" ref="manag2Employer" />
 	</bean>
@@ -1027,7 +981,6 @@
 		<property name="start" value="2021/08/29 09:00" />
 		<property name="end" value="2021/08/30 12:00" />
 		<property name="publica" value="false" />
-		<property name="finish" value="true" />
 		<property name="workload" value="13.00" />
 		<property name="manag" ref="manag3Employer" />
 	</bean>
