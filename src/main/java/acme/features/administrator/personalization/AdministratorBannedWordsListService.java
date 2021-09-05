@@ -5,7 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.personalization.Personalization;
+import acme.entities.spam.Spam;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
@@ -14,12 +14,12 @@ import acme.framework.services.AbstractListService;
 
 
 @Service
-public class AdministratorBannedWordsListService implements AbstractListService<Administrator, Personalization>{
+public class AdministratorBannedWordsListService implements AbstractListService<Administrator, Spam>{
 
 	@Autowired
-	AdministratorPersonalizationRepository repository;
+	AdministratorSpamRepository repository;
 	@Override
-	public boolean authorise(final Request<Personalization> request) {
+	public boolean authorise(final Request<Spam> request) {
 		assert request != null;
 
 		Principal principal;
@@ -29,7 +29,7 @@ public class AdministratorBannedWordsListService implements AbstractListService<
 		}
 
 	@Override
-	public void unbind(final Request<Personalization> request, final Personalization entity, final Model model) {
+	public void unbind(final Request<Spam> request, final Spam entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -39,12 +39,12 @@ public class AdministratorBannedWordsListService implements AbstractListService<
 	}
 
 	@Override
-	public Collection<Personalization> findMany(final Request<Personalization> request) {
+	public Collection<Spam> findMany(final Request<Spam> request) {
 assert request != null;
 		
-		Collection <Personalization>  result;
+		Collection <Spam>  result;
 		
-		result =  this.repository.findPersonalization();
+		result =  this.repository.findSpam();
 		
 		return result;
 	}

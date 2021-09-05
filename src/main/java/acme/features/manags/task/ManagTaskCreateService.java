@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manag;
 import acme.entities.tasks.Task;
-import acme.features.administrator.personalization.AdministratorPersonalizationRepository;
+import acme.features.administrator.personalization.AdministratorSpamRepository;
 import acme.features.administrator.threshold.AdministratorThresholdRepository;
 import acme.filter.Filter;
 import acme.framework.components.Errors;
@@ -25,7 +25,7 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		protected AdministratorThresholdRepository			thresholdRepository;
 
 	@Autowired
-	protected AdministratorPersonalizationRepository	personalizationRepository;
+	protected AdministratorSpamRepository	personalizationRepository;
 
 
 	@Override
@@ -62,9 +62,6 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		manag = this.repository.findOneManagbyUserAccountById(request.getPrincipal().getActiveRoleId());
 
 		result = new Task();
-		result.setTitle("Task 1");
-		result.setDescription("Description of the taks 2");
-		result.setLink("http://example.org");
 		result.setPublica(false);
 		result.setManag(manag);
 

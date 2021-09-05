@@ -4,7 +4,7 @@ package acme.features.administrator.personalization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.personalization.Personalization;
+import acme.entities.spam.Spam;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -13,14 +13,14 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AdministratorPersonalizationDeleteService implements AbstractDeleteService<Administrator, Personalization> {
+public class AdministratorSpamDeleteService implements AbstractDeleteService<Administrator, Spam> {
 
 	@Autowired
-	protected AdministratorPersonalizationRepository repository;
+	protected AdministratorSpamRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Personalization> request) {
+	public boolean authorise(final Request<Spam> request) {
 		assert request != null;
 
 
@@ -32,7 +32,7 @@ public class AdministratorPersonalizationDeleteService implements AbstractDelete
 	}
 
 	@Override
-	public void bind(final Request<Personalization> request, final Personalization entity, final Errors errors) {
+	public void bind(final Request<Spam> request, final Spam entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -42,7 +42,7 @@ public class AdministratorPersonalizationDeleteService implements AbstractDelete
 	}
 
 	@Override
-	public void unbind(final Request<Personalization> request, final Personalization entity, final Model model) {
+	public void unbind(final Request<Spam> request, final Spam entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -52,10 +52,10 @@ public class AdministratorPersonalizationDeleteService implements AbstractDelete
 	}
 
 	@Override
-	public Personalization findOne(final Request<Personalization> request) {
+	public Spam findOne(final Request<Spam> request) {
 		assert request != null;
 
-		Personalization result;
+		Spam result;
 		int id;
 
 		id = request.getModel().getInteger("id");
@@ -64,14 +64,14 @@ public class AdministratorPersonalizationDeleteService implements AbstractDelete
 	}
 
 	@Override
-	public void validate(final Request<Personalization> request, final Personalization entity, final Errors errors) {
+	public void validate(final Request<Spam> request, final Spam entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 	}
 
 	@Override
-	public void delete(final Request<acme.entities.personalization.Personalization> request, final Personalization entity) {
+	public void delete(final Request<acme.entities.spam.Spam> request, final Spam entity) {
 		assert request != null;
 		assert entity != null;
 

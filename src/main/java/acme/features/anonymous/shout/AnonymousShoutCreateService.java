@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.shouts.Shout;
-import acme.features.administrator.personalization.AdministratorPersonalizationRepository;
+import acme.features.administrator.personalization.AdministratorSpamRepository;
 import acme.features.administrator.threshold.AdministratorThresholdRepository;
 import acme.filter.Filter;
 import acme.framework.components.Errors;
@@ -25,7 +25,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	protected AnonymousShoutRepository					repository;
 
 	@Autowired
-	protected AdministratorPersonalizationRepository	personalizationRepository;
+	protected AdministratorSpamRepository	personalizationRepository;
 
 	@Autowired
 	protected AdministratorThresholdRepository			thresholdRepository;

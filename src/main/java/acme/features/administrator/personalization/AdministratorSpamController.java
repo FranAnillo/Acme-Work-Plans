@@ -6,26 +6,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.personalization.Personalization;
+import acme.entities.spam.Spam;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/personalization/")
-public class AdministratorPersonalizationController extends AbstractController<Administrator, Personalization>{
+@RequestMapping("/administrator/spam/")
+public class AdministratorSpamController extends AbstractController<Administrator, Spam>{
 	
 	@Autowired
-    protected AdministratorPersonalizationCreateService createService;
+    protected AdministratorSpamCreateService createService;
 	
 	@Autowired
 	protected AdministratorBannedWordsListService listService;
 	
 	@Autowired
-	protected AdministratorPersonalizationDeleteService deleteService;
+	protected AdministratorSpamDeleteService deleteService;
 	
 	@Autowired
-	protected AdministratorPersonalizationShowService showService;
+	protected AdministratorSpamShowService showService;
 	
 	@PostConstruct
 	protected void initialise() {

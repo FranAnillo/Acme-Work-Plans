@@ -1,4 +1,4 @@
-package acme.entities.personalization;
+package acme.entities.spam;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
@@ -10,7 +10,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Personalization extends DomainEntity{
+public class Spam extends DomainEntity{
 
 	// Serialisation identifier -----------------------------------------------
 

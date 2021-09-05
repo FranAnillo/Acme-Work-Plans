@@ -4,7 +4,7 @@ package acme.features.administrator.personalization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.personalization.Personalization;
+import acme.entities.spam.Spam;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
@@ -12,14 +12,14 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorPersonalizationShowService implements AbstractShowService<Administrator, Personalization> {
+public class AdministratorSpamShowService implements AbstractShowService<Administrator, Spam> {
 
 	@Autowired
-	protected AdministratorPersonalizationRepository repository;
+	protected AdministratorSpamRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Personalization> request) {
+	public boolean authorise(final Request<Spam> request) {
 		assert request != null;
 		
 		Principal principal;
@@ -31,10 +31,10 @@ public class AdministratorPersonalizationShowService implements AbstractShowServ
 
 
 	@Override
-	public Personalization findOne(final Request<Personalization> request) {
+	public Spam findOne(final Request<Spam> request) {
 		assert request != null;
 
-		Personalization result;
+		Spam result;
 		int id;
 
 		id = request.getModel().getInteger("id");
@@ -44,7 +44,7 @@ public class AdministratorPersonalizationShowService implements AbstractShowServ
 	}
 
 	@Override
-	public void unbind(final Request<Personalization> request, final Personalization entity, final Model model) {
+	public void unbind(final Request<Spam> request, final Spam entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;

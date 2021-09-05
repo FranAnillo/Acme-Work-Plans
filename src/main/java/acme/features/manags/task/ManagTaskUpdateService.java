@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manag;
 import acme.entities.tasks.Task;
-import acme.features.administrator.personalization.AdministratorPersonalizationRepository;
+import acme.features.administrator.personalization.AdministratorSpamRepository;
 import acme.features.administrator.threshold.AdministratorThresholdRepository;
 import acme.filter.Filter;
 import acme.framework.components.Errors;
@@ -36,7 +36,7 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 	protected AdministratorThresholdRepository			thresholdRepository;
 
 	@Autowired
-	protected AdministratorPersonalizationRepository	personalizationRepository;
+	protected AdministratorSpamRepository	personalizationRepository;
 
 	// AbstractUpdateService<Authenticated, Provider> interface ---------------
 	
