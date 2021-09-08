@@ -1,4 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-06-07 12:20:21.887,acme.testing.CreateConsumerTest,createConsumer,4794,"[1] recordIndex=0, company=PepeMax, sector=null",OK
-2021-06-07 12:20:26.868,acme.testing.CreateConsumerTest,createConsumer,4791,"[2] recordIndex=1, company=null, sector=primary",OK
-2021-06-07 12:20:31.834,acme.testing.CreateConsumerTest,PcreateConsumer,4775,"[1] recordIndex=0, company=PepeMax, sector=primary",OK

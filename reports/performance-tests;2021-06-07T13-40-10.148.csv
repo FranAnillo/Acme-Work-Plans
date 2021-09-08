@@ -1,2 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-06-07 13:40:22.111,acme.testing.AdministratorDashboardTest,listDashboard,3530,"[1] publicTask=24.00, privateTask=24.00, finishTask=24.00, notFinishTask=24.00, minimumWorkload=20, maximumWorkload=100, averageWorkload=74.90, deviationWorkload=27.70, averageExecutionPeriods=530,806.25",OK

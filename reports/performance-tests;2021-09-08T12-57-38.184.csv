@@ -1,2 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-09-08 12:58:22.045,acme.testing.ManagTaskListTest,ManagerTaskList,32734,"[1] recordIndex=0, title=Political, workload=5.00, description=The international community still has daunting tasks before it, start=2021/12/17 03:00, end=2021/12/18 07:00, link=null",Cannot find 'By.xpath: //div[@id='mainMenu']/ul/li[a[normalize-space()='Manager']]/div[contains(@class, 'dropdown-menu')]/a[normalize-space()='Tasks']'

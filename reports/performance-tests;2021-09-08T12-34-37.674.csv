@@ -1,2 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-09-08 12:35:58.334,acme.testing.AnonymousShoutTest,create,39265,"[1] recordIndex=15, author=Pepe Garcia, text=Be the change you want to see in the home, info=http://example.org",OK
