@@ -31,7 +31,7 @@ public class ManagDeleteTaskTest extends AcmePlannerTest {
 		super.checkInputBoxHasValue("link",link);
 		super.clickOnSubmitButton("Delete");
 		
-		super.signOut();
+		super.signOut(); 
 	}
 
 }
