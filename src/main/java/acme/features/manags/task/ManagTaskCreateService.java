@@ -75,7 +75,7 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		if (!errors.hasErrors("end")) {
+		if (!errors.hasErrors("end") && !errors.hasErrors("start")) {
 			errors.state(request, entity.getEnd().after(entity.getStart()), "end", "manag.task.error.end");
 		}
 		

@@ -4,10 +4,10 @@ Task 1,,20.00,2021/10/23 06:00,2022/10/24 06:00,http://example.org
 Task 1,Description of the task 1,,2021/10/23 06:00,2022/10/24 06:00,http://example.org
 Task 1,Description of the task 1,20.00,,2022/10/24 06:00,http://example.org
 Task 1,Description of the task 1,20.00,2021/10/23 06:00,,http://example.org
-Task 1,Description of the task 1,20.00,2021/10/23 06:00,2022/10/24 06:00,http://example.org
+Task 1,Description of the task 1,20.00,2021/10/24 06:00,2021/10/24 06:00,http://example.org
 Task 1,Description of the task 1,-1,2021/10/23 06:00,2022/10/24 06:00,http://example.org
 Task 1,Description of the task 1,20.00,2021/10/23 06:00,2020/10/24 06:00,http://example.org
 Task 1,Description of the task 1,20.00,2021/10/23 06:00,2022/10/24 06:00,description1
 Sex,Description of the task 1,20.00,2021/10/23 06:00,2022/10/24 06:00,http://example.org
 Task 1,Sex,20.00,2021/10/23 06:00,2022/10/24 06:00,http://example.org
-Task 1,Description of the task 1,20.00,2021/10/23 06:00,2022/10/24 06:00,http://example.org
+Task 1,Description of the task 1,99.59,2021/10/23 06:00,2021/10/24 06:00,http://example.org

@@ -449,6 +449,33 @@
 		class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="manag5UserAccount" />
 	</bean>
+	
+	<bean name="manag6UserAccount"
+		class="acme.framework.entities.UserAccount">
+		<property name="username" value="manag6" />
+		<property name="password" value="manag6" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="manag" />
+				<property name="surname" value="Six" />
+				<property name="email" value="manag6@mail.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="manag6Employer" />
+				<ref bean="manag6Authenticated" />
+			</list>
+		</property>
+	</bean>
+	<bean name="manag6Employer" class="acme.entities.roles.Manag">
+		<property name="userAccount" ref="manag6UserAccount" />
+	</bean>
+	<bean name="manag6Authenticated"
+		class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manag6UserAccount" />
+	</bean>
 
 	<!-- Tasks -->
 

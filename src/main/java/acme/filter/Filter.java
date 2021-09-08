@@ -57,7 +57,7 @@ private Filter() {
                 final int numberOfCensoredString =banned.toString().split(";").length;
                 final StringBuilder bannedString= new StringBuilder();
                 bannedString.append(palabras[k]);
-                if (bannedString == null || bannedString.isEmpty())
+                if (bannedString == null || bannedString.toString().isEmpty())
                     break;
                 for (int w = 1; numberOfCensoredString > (w+i); w++) {     
 
