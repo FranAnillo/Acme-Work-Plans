@@ -1,7 +1,9 @@
 package acme.features.authenticated.task;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,13 +42,15 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
 	public Collection<Task> findMany(final Request<Task> request) {
 assert request != null;
 		
-		Collection <Task>  result= this.repository.findTask();
-		for(final Task t:result) {
-			if (!t.isFinished()) result.remove(t);
-		}
-		result =  result.stream().sorted(Comparator.comparingInt(Task::getTime)).collect(Collectors.toList());
+		final Collection <Task>  result= this.repository.findTask();
+		List <Task>  res = new ArrayList<>();
 		
-		return result;
+		for(final Task t:result) {
+			if (t.isFinished()) res.add(t);
+		}
+		res = res.stream().sorted(Comparator.comparingInt(Task::getTime)).collect(Collectors.toList());
+		
+		return res;
 	}
 
 }
