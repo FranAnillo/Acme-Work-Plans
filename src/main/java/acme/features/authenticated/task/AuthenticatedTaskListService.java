@@ -40,9 +40,11 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
 	public Collection<Task> findMany(final Request<Task> request) {
 assert request != null;
 		
-		Collection <Task>  result;
-		
-		result =  this.repository.findTask().stream().filter(t->t.isFinished()).sorted(Comparator.comparingInt(Task::getTime)).collect(Collectors.toList());
+		Collection <Task>  result= this.repository.findTask();
+		for(final Task t:result) {
+			if (!t.isFinished()) result.remove(t);
+		}
+		result =  result.stream().sorted(Comparator.comparingInt(Task::getTime)).collect(Collectors.toList());
 		
 		return result;
 	}

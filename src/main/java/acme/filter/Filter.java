@@ -7,7 +7,9 @@ import acme.datatypes.Workload;
 
 public class Filter {
 
-
+private Filter() {
+	
+}
 	// Internal state
 	
 		public static boolean calculate(final Date start, final Date end, final Workload workload) {
@@ -50,23 +52,20 @@ public class Filter {
 
         for (int i = 0; censoredWords.size() > i; i++) {
             for (int k = 0; palabras.length > k; k++) {
-            	final String banned=censoredWords.get(i).replace(" ", ";");
-                final int numberOfCensoredString =banned.split(";").length;
-                String bannedString = palabras[k];
+            	final StringBuilder banned=new StringBuilder();
+            	banned.append(censoredWords.get(i).replace(" ", ";"));
+                final int numberOfCensoredString =banned.toString().split(";").length;
+                final StringBuilder bannedString= new StringBuilder();
+                bannedString.append(palabras[k]);
                 if (bannedString == null || bannedString.isEmpty())
                     break;
-                for (int w = 1; numberOfCensoredString > (w+i); w++) {
+                for (int w = 1; numberOfCensoredString > (w+i); w++) {     
 
-    	
-                    while (k + w < palabras.length && palabras[k + w].isEmpty()) {
-                        w++;
-                    }        
-
-                    if (k + w >= palabras.length)
+                    if (k + w >= palabras.length|| palabras[k + w].isEmpty())
                         break;
-                    bannedString = bannedString + ";" + palabras[k + w];
+                    bannedString.append(";"+ palabras[k + w]);
                 }
-                if (banned.equals(bannedString)) {
+                if (banned.toString().equals(bannedString.toString())) {
                     numberBannedWords = numberBannedWords + numberOfCensoredString;
 
 

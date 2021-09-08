@@ -50,7 +50,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		final List<Integer> workloadList = workloads.stream().map(Workload::getTime).sorted().collect(Collectors.toList());
 		final Integer numberOfPublicTask;
 		final Integer numberOfPrivateTask;
-		final Integer numberOfFinishTask;
+		Integer numberOfFinishTask = 0;
 		final Integer numberOfNotFinishTask;
 		Workload minWorkload;
 		Workload maxWorkload;
@@ -63,8 +63,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		
 		numberOfPublicTask = this.repository.numberOfPublicTask();
 		numberOfPrivateTask = this.repository.numberOfPrivateTask();
+		final Collection <Task>  ts= this.repository.findTasks();
+		for(final Task t:ts) {
+			if (t.isFinished()) numberOfFinishTask++;
+		}
 		
-		numberOfFinishTask = (int) this.repository.findTasks().stream().filter(x->x.isFinished()).count();
 		numberOfNotFinishTask =  this.repository.findTasks().size()-numberOfFinishTask;
 				
 		averageExecutionPeriods = 0.0;
