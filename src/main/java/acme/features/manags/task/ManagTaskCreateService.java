@@ -1,5 +1,7 @@
 package acme.features.manags.task;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -75,6 +77,12 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		assert errors != null;
 		if (!errors.hasErrors("end")) {
 			errors.state(request, entity.getEnd().after(entity.getStart()), "end", "manag.task.error.end");
+		}
+		
+		if (!errors.hasErrors("start")) {
+			Date moment;
+	        moment = new Date(System.currentTimeMillis() - 1);
+			errors.state(request, entity.getStart().after(moment), "start", "manag.task.error.start");
 		}
 		
 		if((!errors.hasErrors("workload"))) {
