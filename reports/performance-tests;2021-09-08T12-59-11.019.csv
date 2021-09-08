@@ -1,0 +1,2 @@
+timestamp,test-class,test-method,time,description,result
+2021-09-08 12:59:28.334,acme.testing.ManagTaskListTest,ManagerTaskList,6444,"[1] recordIndex=0, title=Political, workload=5.00, description=The international community still has daunting tasks before it, start=2021/12/17 03:00, end=2021/12/18 07:00, link=null",OK
