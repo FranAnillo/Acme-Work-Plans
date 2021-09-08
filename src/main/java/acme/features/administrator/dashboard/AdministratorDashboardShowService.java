@@ -83,14 +83,14 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		averageWorkload=AdministratorDashboardShowService.minutesToHourDouble(workloads.stream().collect(Collectors.averagingInt(Workload::getTime)));
 		if(!tasks.isEmpty()) {
 		for (final Task t: tasks) {
-			final Double duracion = ((t.getEnd().getTime() / 60000.00) - (t.getStart().getTime() / 60000.00));
+			final Double duracion = t.getExecutionPeriod();
 			averageExecutionPeriods = averageExecutionPeriods + duracion;
 		}
 		averageExecutionPeriods = averageExecutionPeriods / tasks.size();
 		
 		for (final Task t: tasks) {
-			final Double duracion = ((t.getEnd().getTime() / 60000.00) - (t.getStart().getTime() / 60000.00));
-			//Calculamos el maximo en los Workloads
+			final Double duracion = t.getExecutionPeriod();
+			//Calculamos el maximo en los periodos de ejecución
 			if (duracion>maximumExecutionPeriods) {
 				maximumExecutionPeriods=1.0*duracion;
 			}
@@ -98,8 +98,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		//Partimos del maximo y vamos decreciendo para encontrar el minimo
 		minimumExecutionPeriods = maximumExecutionPeriods;
 		for (final Task t: tasks) {
-			final Double duracion = ((t.getEnd().getTime() / 60000.00) - (t.getStart().getTime() / 60000.00));
-			//Calculamos el maximo en los Workloads
+			final Double duracion =t.getExecutionPeriod();
+			//Calculamos el maximo en los periodos de ejecución
 			if (duracion<minimumExecutionPeriods) {
 				minimumExecutionPeriods=1.0*duracion;
 			}
@@ -107,7 +107,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		
 		final List<Double> executionPeriodsList = new ArrayList<Double>();
 		for (final Task t: tasks) {
-			final Double duracion = ((t.getEnd().getTime() / 60000.00) - (t.getStart().getTime() / 60000.00));
+			final Double duracion = t.getExecutionPeriod();
 			executionPeriodsList.add(duracion);
 		}
 		

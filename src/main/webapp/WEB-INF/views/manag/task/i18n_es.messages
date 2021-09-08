@@ -28,6 +28,7 @@ manag.task.form.button.create = Crear
 manag.task.button.delete=Borrar
 manag.task.button.update=Actualizar
 manag.task.button.publish=Publicar
+default.error.workload.zero= La carga de trabajo no puede ser 0.00, tiene que ser al menos 0.01
 
 manag.task.form.error.title= El título contiene demasiadas palabras de spam
 manag.task.form.error.description= La descripción contiene demasiadas palabras de spam

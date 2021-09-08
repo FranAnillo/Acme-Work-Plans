@@ -84,7 +84,9 @@ public class ManagTaskCreateService implements AbstractCreateService<Manag, Task
 		if (!errors.hasErrors("start")&&!errors.hasErrors("end")&&!errors.hasErrors("workload")) {
 			errors.state(request, Filter.calculate(entity.getStart(), entity.getEnd(), entity.getWorkload()), "workload", "acme.validation.decimal-max",Filter.calculate(entity.getStart(),  entity.getEnd()));
 		}
-
+		if((!errors.hasErrors("workload"))) {
+			errors.state(request, entity.getWorkload().getTime()>0, "workload", "default.error.workload.zero");
+		}
 		if (!errors.hasErrors("description")) {
 			errors.state(request, Filter.filterString(entity.getDescription(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "description", "manag.task.form.error.description");
 		}

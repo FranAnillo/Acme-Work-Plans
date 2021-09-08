@@ -79,6 +79,10 @@ public class Task extends DomainEntity {
 		now = new Date();
 		return this.end.before(now);
 	}
+	public double getExecutionPeriod() {
+		
+		return  ((this.end.getTime() / 60000.00) - (this.start.getTime() / 60000.00));
+	}
 		// Relationships ----------------------------------------------------------
 	
 		@NotNull

@@ -113,6 +113,9 @@ public class ManagTaskUpdateService implements AbstractUpdateService<Manag, Task
 		if (!errors.hasErrors("title")) {
 			errors.state(request, Filter.filterString(entity.getTitle(),this.personalizationRepository.findCensoredWords(), this.thresholdRepository.findThresholdById()), "title", "manag.task.form.error.title");
 		}
+		if((!errors.hasErrors("workload"))) {
+			errors.state(request, entity.getWorkload().getTime()>0, "workload", "default.error.workload.zero");
+		}
 	}
 
 	@Override
