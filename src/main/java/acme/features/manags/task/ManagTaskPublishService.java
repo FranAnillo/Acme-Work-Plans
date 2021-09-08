@@ -52,7 +52,7 @@ public class ManagTaskPublishService implements AbstractUpdateService<Manag, Tas
 		task = this.repository.findOneTaskById(taskId);
 		manag = task.getManag();
 		principal = request.getPrincipal();
-		result = task.isPublishable()&& manag.getUserAccount().getId() == principal.getAccountId();
+		result = manag.getUserAccount().getId() == principal.getAccountId();
 
 		return result;
 	}
@@ -68,7 +68,7 @@ public class ManagTaskPublishService implements AbstractUpdateService<Manag, Tas
 
 		if (!errors.hasErrors("start")) {
 			calendar = new GregorianCalendar();
-			calendar.add(Calendar.WEEK_OF_MONTH, 1);
+			 //calendar.add(Calendar.WEEK_OF_MONTH, 1);
 			minimumDeadline = calendar.getTime();
 			errors.state(request, entity.getStart().after(minimumDeadline), "start", "manag.task.form.error.too-close");
 		}
