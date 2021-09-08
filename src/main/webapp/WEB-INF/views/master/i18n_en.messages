@@ -43,9 +43,9 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.dashboard = Dashboard
-master.menu.administrator.personalization = Censored words
+master.menu.administrator.spam = Censored words
 master.menu.administrator.threshold  = Word threshold
-master.menu.administrator.personalization.list= List of censored words
+master.menu.administrator.spam.list= List of censored words
 
 # master.menu.provider ########################################################
 

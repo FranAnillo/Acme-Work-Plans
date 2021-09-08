@@ -12,7 +12,7 @@ public class ManagTaskListTest extends AcmePlannerTest {
 	@Order(20)
 	public void ManagerTaskList(final int recordIndex, final String title, final String workload, final String description, final String start, final String end, final String link) {
 
-		super.signIn("manager1", "manager1");
+		super.signIn("manag1", "manag1");
 		super.clickOnMenu("Manager", "Tasks");
 
 		super.checkColumnHasValue(recordIndex, 0, title);

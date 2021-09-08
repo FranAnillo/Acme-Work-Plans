@@ -12,7 +12,7 @@ public class AnonymousTaskTest extends AcmePlannerTest{
 	public void AnonymousTaskListPositive(final int recordIndex, final String title, 
 		final String workload,final String description,final String start,final String end) {		
 				
-		super.clickOnMenu("Anonymous", "Tasks");		
+		super.clickOnMenu("Anonymous", "My tasks");		
 		
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, workload);

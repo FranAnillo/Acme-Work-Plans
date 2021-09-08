@@ -12,13 +12,14 @@ public class AnonymousShoutTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/shoutList.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
-	public void listShout(final int recordIndex, final String moment, final String author, final String text) {		
+	public void listShout(final int recordIndex, final String moment, final String author, final String text, final String info) {		
 		
 		super.clickOnMenu("Anonymous", "Shout List");		
 		
 		super.checkColumnHasValue(recordIndex, 0, moment);
 		super.checkColumnHasValue(recordIndex, 1, author);
 		super.checkColumnHasValue(recordIndex, 2, text);
+		super.checkColumnHasValue(recordIndex, 3, info);
 		
 	}
 

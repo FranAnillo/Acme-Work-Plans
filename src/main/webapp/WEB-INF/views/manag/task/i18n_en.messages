@@ -29,6 +29,7 @@ manag.task.form.button.create = Create
 manag.task.button.delete= Delete
 manag.task.button.update=Update
 manag.task.button.publish=Publish
+
 default.error.workload.zero=The workload must not be 0.00, it must be at least 0.01
 
 manag.task.form.error.title= The title has spam words
