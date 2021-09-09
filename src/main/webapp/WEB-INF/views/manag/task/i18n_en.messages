@@ -14,7 +14,7 @@ manag.task.list.label.start = Start
 manag.task.list.label.end = End
 manag.task.list.label.workload = Workload
 manag.task.error.workload =Workload is not correct
-manag.task.error.end =End is before start 
+manag.task.error.start =Start must be before end
 
 manag.task.label.title = Title
 manag.task.label.description = Description

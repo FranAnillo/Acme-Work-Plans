@@ -14,7 +14,7 @@ manag.task.list.label.start = Comienzo
 manag.task.list.label.end = Finalizacion
 manag.task.list.label.workload = Carga de trabajo
 manag.task.error.workload =La carga de trabajo no es correcta
-manag.task.error.end=La fecha final es anterior a la de comienzo
+manag.task.error.start=La fecha final es anterior a la de comienzo
 
 manag.task.label.title = Titulo
 manag.task.label.description = Descripcion
