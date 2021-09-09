@@ -1,0 +1,2 @@
+timestamp,test-class,test-method,time,description,result
+2021-09-09 11:57:51.201,acme.testing.ManagDeleteTaskTest,deleteTasksNegativeManager,16100,"[1] recordIndex=0, title=Work, description=Percentaje of the tasks which had to wait for resources, workload=2.40, start=2021/12/15 00:00, end=2021/12/16 03:00, link=null",null

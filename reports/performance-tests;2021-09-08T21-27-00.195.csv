@@ -1,7 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-09-08 21:27:18.055,acme.testing.AuthenticatedTaskListTest,listPositive,6084,"[1] recordIndex=0, title=Work, description=Each member of the team should have clear responsibilities, start=2021/08/22 05:00, end=2021/08/23 11:00, workload=8.20",OK
-2021-09-08 21:27:24.239,acme.testing.AuthenticatedTaskListTest,listPositive,5998,"[2] recordIndex=1, title=Political, description=One of the main tasks of the Board is protection, start=2021/08/20 02:00, end=2021/08/21 07:00, workload=10.25",OK
-2021-09-08 21:27:30.447,acme.testing.AuthenticatedTaskListTest,listPositive,6020,"[3] recordIndex=2, title=Work, description=At present, our development tasks have become more pressing, start=2021/08/24 00:00, end=2021/08/25 10:00, workload=12.00",OK
-2021-09-08 21:27:36.695,acme.testing.AuthenticatedTaskListTest,listPositive,6043,"[4] recordIndex=3, title=Political, description=Overcoming poverty is one of its priority tasks, start=2021/08/26 05:00, end=2021/08/27 11:00, workload=13.00",OK
-2021-09-08 21:27:42.961,acme.testing.AuthenticatedTaskListTest,listPositive,6063,"[5] recordIndex=4, title=Political, description=The fundamental importance of the democratic slogans and tasks, start=2021/08/17 00:00, end=2021/08/19 00:00, workload=16.00",OK
-2021-09-08 21:27:49.184,acme.testing.AuthenticatedTaskListTest,listPositive,6035,"[6] recordIndex=5, title=Political, description=These tasks had been temporarily assigned to military observers, start=2021/08/14 06:00, end=2021/08/16 11:00, workload=34.00",OK
