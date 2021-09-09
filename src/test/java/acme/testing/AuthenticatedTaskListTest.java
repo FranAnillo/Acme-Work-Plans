@@ -13,7 +13,7 @@ public class AuthenticatedTaskListTest extends AcmePlannerTest {
 	@CsvFileSource(resources = "/authenticated/task.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
 	public void listPositive(final int recordIndex, final String title, final String description , final String start, final String end,final String workload) {		
-		super.signIn("administrator", "administrator");
+		super.signIn("manag1", "manag1");
 		super.clickOnMenu("Authenticated", "Tasks");		
 		
 		

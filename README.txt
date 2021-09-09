@@ -16,6 +16,6 @@ of a task.But you can end a task before the end of the task.
 To create a task as a manager the dates must be provided like year/month/day hour:minute if the service is used in english.
 Para crear una tarea como manager lasa fechas deben ser introducidas día/mes/año hora:minutos si el servicio se usa en español.
 
-Github repository: https://github.com/FranAnillo/Acme-Planner.git
+Github repository: https://github.com/FranAnillo/Acme-Work-Plans.git
 
-Release: https://github.com/FranAnillo/Acme-Planner/releases/tag/2.0.0
+Release: https://github.com/FranAnillo/Acme-Work-Plans/releases/tag/2.0.0
