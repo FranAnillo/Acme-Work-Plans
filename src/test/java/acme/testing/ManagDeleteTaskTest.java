@@ -12,7 +12,7 @@ public class ManagDeleteTaskTest extends AcmePlannerTest {
 	public void deletePositive(final int recordIndex, final String title, final String description,final String workload,final String start, final String end, final String link) {		
 		
 		super.signIn("manag5", "manag5");
-		super.clickOnMenu("manag", "My Tasks");	
+		super.clickOnMenu("Manager", "My Tasks");	
 		
 		// Checkea que se cumple que las columnas coinciden con los valores que indicamos
 		super.checkColumnHasValue(recordIndex, 0, title);

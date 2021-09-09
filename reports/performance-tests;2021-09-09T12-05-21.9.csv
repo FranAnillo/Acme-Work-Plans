@@ -1,2 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-09-09 12:06:16.703,acme.testing.ManagDeleteTaskTest,deleteTasksNegativemanag,17105,"[1] recordIndex=0, title=Do exercises, description=I have to finish the dp delivery, periodInitial=2021/03/31 17:50, periodFinal=2021/03/31 18:55, workloadInHours=0.44, link=http://www.sample-app.com, isPublic=true",null
